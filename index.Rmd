@@ -73,8 +73,7 @@ dbConnection <- with(db.sqlite.cfg, dbConnect(driver, dbname = fName))
 ---
 ## Statistiche per Nazione
 
-```{r "countryRawDataQuery"}
-# DB query ----------------------------------------------------------------
+```{r "countryRawDataQuery", echo=FALSE, cache=FALSE}
 sqlQueryToDataTable <- function(countryName, sqlQuery = db.sqlite.cfg$query) {
   data.table(
     execQuery(sqlQuery, connection = dbConnection, countryName = countryName)
@@ -83,8 +82,9 @@ sqlQueryToDataTable <- function(countryName, sqlQuery = db.sqlite.cfg$query) {
 }
 
 countryRawData_l <- lapply(db.sqlite.cfg$countryNames, sqlQueryToDataTable)
+#countryRawData_l
 # Convert Lat and Long coordinates in Lat:Long
-lapply(
+countryRawData_l <- lapply(
   countryRawData_l
   , function(country_dt) country_dt[, latLong := paste(siteLat, siteLong, sep = ":")]
   )

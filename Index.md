@@ -55,46 +55,11 @@ github:
 ## Statistiche per Nazione
 
 
-```r
-# DB query ----------------------------------------------------------------
-sqlQueryToDataTable <- function(countryName, sqlQuery = db.sqlite.cfg$query) {
-  data.table(
-    execQuery(sqlQuery, connection = dbConnection, countryName = countryName)
-    , key = c("siteLTERCode", "siteName", "domainName")
-  )
-}
-
-countryRawData_l <- lapply(db.sqlite.cfg$countryNames, sqlQueryToDataTable)
-# Convert Lat and Long coordinates in Lat:Long
-lapply(
-  countryRawData_l
-  , function(country_dt) country_dt[, latLong := paste(siteLat, siteLong, sep = ":")]
-  )
-```
-
 ```
 ## Error: := is defined for use in j only, and (currently) only once; i.e.,
 ## DT[i,col:=1L] and DT[,newcol:=sum(colB),by=colA] are ok, but not
 ## DT[i,col]:=1L, not DT[i]$col:=1L and not DT[,{newcol1:=1L;newcol2:=2L}].
 ## Please see help(":="). Check is.data.table(DT) is TRUE.
-```
-
-```r
-
-plot(
-  gvisMap(
-    unique(countryRawData_l[[1]])
-    , locationvar = "latLong"
-    #, tipvar      = "tip"
-    , options     = list(
-      mapType     = 'satellite'
-      , useMapTypeControl = TRUE
-      , width = 1000
-      , height = 600
-      )
-    , chartid = "A5Plot"
-    )
-  )
 ```
 
 ```

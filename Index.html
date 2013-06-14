@@ -105,43 +105,10 @@ Google Drive</li>
     <h2>Statistiche per Nazione</h2>
   </hgroup>
   <article>
-    <pre><code class="r"># DB query ----------------------------------------------------------------
-sqlQueryToDataTable &lt;- function(countryName, sqlQuery = db.sqlite.cfg$query) {
-  data.table(
-    execQuery(sqlQuery, connection = dbConnection, countryName = countryName)
-    , key = c(&quot;siteLTERCode&quot;, &quot;siteName&quot;, &quot;domainName&quot;)
-  )
-}
-
-countryRawData_l &lt;- lapply(db.sqlite.cfg$countryNames, sqlQueryToDataTable)
-# Convert Lat and Long coordinates in Lat:Long
-lapply(
-  countryRawData_l
-  , function(country_dt) country_dt[, latLong := paste(siteLat, siteLong, sep = &quot;:&quot;)]
-  )
-</code></pre>
-
-<pre><code>## Error: := is defined for use in j only, and (currently) only once; i.e.,
+    <pre><code>## Error: := is defined for use in j only, and (currently) only once; i.e.,
 ## DT[i,col:=1L] and DT[,newcol:=sum(colB),by=colA] are ok, but not
 ## DT[i,col]:=1L, not DT[i]$col:=1L and not DT[,{newcol1:=1L;newcol2:=2L}].
 ## Please see help(&quot;:=&quot;). Check is.data.table(DT) is TRUE.
-</code></pre>
-
-<pre><code class="r">
-plot(
-  gvisMap(
-    unique(countryRawData_l[[1]])
-    , locationvar = &quot;latLong&quot;
-    #, tipvar      = &quot;tip&quot;
-    , options     = list(
-      mapType     = &#39;satellite&#39;
-      , useMapTypeControl = TRUE
-      , width = 1000
-      , height = 600
-      )
-    , chartid = &quot;A5Plot&quot;
-    )
-  )
 </code></pre>
 
 <pre><code>## Error: arguments imply differing number of rows: 0, 70
