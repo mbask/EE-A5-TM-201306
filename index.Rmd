@@ -74,13 +74,6 @@ dbConnection <- with(db.sqlite.cfg, dbConnect(driver, dbname = fName))
 ## Statistiche per Nazione
 
 ```{r "countryRawDataQuery", echo=FALSE, cache=FALSE, results='asis'}
-sqlQueryToDataTable <- function(countryName, sqlQuery = db.sqlite.cfg$query) {
-  data.table(
-    execQuery(sqlQuery, connection = dbConnection, countryName = countryName)
-    , key = c("siteLTERCode", "siteName", "domainName")
-  )
-}
-
 countryRawData_l <- lapply(
   db.sqlite.cfg$countryNames
   , function(cName) execQuery(db.sqlite.cfg$query[1], connection = dbConnection, countryName = cName)
@@ -94,7 +87,7 @@ countryRawData_l <- lapply(
 
 plot(
   gvisMap(
-    unique(countryRawData_l[[1]])
+    unique(data.table(countryRawData_l[[1]]), key = c("siteLTERCode", "siteName", "domainName"))
     , locationvar = "latLong"
     #, tipvar      = "tip"
     , options     = list(
