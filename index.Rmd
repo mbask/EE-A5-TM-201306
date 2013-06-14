@@ -85,7 +85,10 @@ countryRawData_l <- lapply(
   , function(country_df) within(country_df, {latLong <- paste(siteLat, siteLong, sep = ":")})
   )
 
-countryRawData_l[[1]] <- data.table(countryRawData_l[[1]], key = c("siteLTERCode", "siteName", "domainName"))
+countryRawData_l[[1]] <- data.table(
+  countryRawData_l[[1]]
+  , key = c("siteLTERCode", "siteName", "domainName")
+  )
 
 plot(
   gvisMap(
