@@ -73,7 +73,7 @@ dbConnection <- with(db.sqlite.cfg, dbConnect(driver, dbname = fName))
 ---
 ## Statistiche per Nazione
 
-```{r "countryRawDataQuery", echo=FALSE, cache=FALSE}
+```{r "countryRawDataQuery", echo=FALSE, cache=FALSE, results='asis'}
 sqlQueryToDataTable <- function(countryName, sqlQuery = db.sqlite.cfg$query) {
   data.table(
     execQuery(sqlQuery, connection = dbConnection, countryName = countryName)
