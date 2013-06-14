@@ -81,12 +81,15 @@ sqlQueryToDataTable <- function(countryName, sqlQuery = db.sqlite.cfg$query) {
   )
 }
 
-countryRawData_l <- lapply(db.sqlite.cfg$countryNames, sqlQueryToDataTable)
+countryRawData_l <- lapply(
+  db.sqlite.cfg$countryNames
+  , function(cName) execQuery(db.sqlite.cfg$query[1], connection = dbConnection, countryName = cName)
+  )
 
 # Convert Lat and Long coordinates in Lat:Long
 countryRawData_l <- lapply(
   countryRawData_l
-  , function(country_dt) country_dt[, latLong := paste(siteLat, siteLong, sep = ":")]
+  , function(country_df) within(country_df, {latLong <- paste(siteLat, siteLong, sep = ":")})
   )
 
 plot(

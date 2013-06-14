@@ -55,16 +55,6 @@ github:
 ## Statistiche per Nazione
 
 
-```
-## Error: := is defined for use in j only, and (currently) only once; i.e.,
-## DT[i,col:=1L] and DT[,newcol:=sum(colB),by=colA] are ok, but not
-## DT[i,col]:=1L, not DT[i]$col:=1L and not DT[,{newcol1:=1L;newcol2:=2L}].
-## Please see help(":="). Check is.data.table(DT) is TRUE.
-```
-
-```
-## Error: arguments imply differing number of rows: 0, 70
-```
 
 
 ---
