@@ -55,7 +55,7 @@ github:
 ## Statistiche per Nazione
 
 <!-- Map generated in R 3.0.1 by googleVis 0.4.3 package -->
-<!-- Sun Jun 16 17:53:49 2013 -->
+<!-- Sun Jun 16 17:59:39 2013 -->
 
 
 <!-- jsHeader -->
@@ -198,19 +198,19 @@ function displayChartCountryPlotPoland() {
   style="width: 800px; height: 200px;">
 </div>
 <!-- html table generated in R 3.0.1 by xtable 1.7-1 package -->
-<!-- Sun Jun 16 17:53:49 2013 -->
+<!-- Sun Jun 16 17:59:39 2013 -->
 <TABLE >
-<TR> <TH>  </TH> <TH> parameterName </TH> <TH> count </TH>  </TR>
-  <TR> <TD align="right"> 1 </TD> <TD> Annual mean temperature and precipitation (snow where relevant) </TD> <TD align="right">   4 </TD> </TR>
-  <TR> <TD align="right"> 29 </TD> <TD> Secondary producers: zooplankton </TD> <TD align="right">   4 </TD> </TR>
-  <TR> <TD align="right"> 2 </TD> <TD> Atmospheric deposition of main nutrients/pollutants </TD> <TD align="right">   3 </TD> </TR>
-  <TR> <TD align="right"> 7 </TD> <TD> Chemistry of precipitation and snow </TD> <TD align="right">   3 </TD> </TR>
-  <TR> <TD align="right"> 8 </TD> <TD> Chlorophyll a (connected to biomass in lakes) </TD> <TD align="right">   3 </TD> </TR>
-  <TR> <TD align="right"> 9 </TD> <TD> Cover of CORINE/EUNIS land uses and habitats </TD> <TD align="right">   3 </TD> </TR>
-  <TR> <TD align="right"> 11 </TD> <TD> History of growth by tree ring widths </TD> <TD align="right">   3 </TD> </TR>
-  <TR> <TD align="right"> 15 </TD> <TD> Monthly precipitation and mean temperature (min, max mean temperature) </TD> <TD align="right">   3 </TD> </TR>
-  <TR> <TD align="right"> 19 </TD> <TD> Physical/chemical characteristics: oxygen </TD> <TD align="right">   3 </TD> </TR>
-  <TR> <TD align="right"> 21 </TD> <TD> Physical/chemical characteristics: temperature </TD> <TD align="right">   3 </TD> </TR>
+<TR> <TH> Parameter Name </TH> <TH> Count </TH>  </TR>
+  <TR> <TD> Annual mean temperature and precipitation (snow where relevant) </TD> <TD align="right">   4 </TD> </TR>
+  <TR> <TD> Secondary producers: zooplankton </TD> <TD align="right">   4 </TD> </TR>
+  <TR> <TD> Atmospheric deposition of main nutrients/pollutants </TD> <TD align="right">   3 </TD> </TR>
+  <TR> <TD> Chemistry of precipitation and snow </TD> <TD align="right">   3 </TD> </TR>
+  <TR> <TD> Chlorophyll a (connected to biomass in lakes) </TD> <TD align="right">   3 </TD> </TR>
+  <TR> <TD> Cover of CORINE/EUNIS land uses and habitats </TD> <TD align="right">   3 </TD> </TR>
+  <TR> <TD> History of growth by tree ring widths </TD> <TD align="right">   3 </TD> </TR>
+  <TR> <TD> Monthly precipitation and mean temperature (min, max mean temperature) </TD> <TD align="right">   3 </TD> </TR>
+  <TR> <TD> Physical/chemical characteristics: oxygen </TD> <TD align="right">   3 </TD> </TR>
+  <TR> <TD> Physical/chemical characteristics: temperature </TD> <TD align="right">   3 </TD> </TR>
    </TABLE>
 
 

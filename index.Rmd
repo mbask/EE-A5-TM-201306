@@ -97,7 +97,7 @@ countryRawData_l <- lapply(
 countryAggrData_l <- countryRawData_l
 countryAggrData_l <- lapply(
   countryAggrData_l
-  , function(country_df) ddply(country_df, .(parameterName), summarize, count = length(parameterName))
+  , function(country_df) { tmp_df <- ddply(country_df, .(parameterName), summarize, Count = length(parameterName)); colnames(tmp_df) <- c("Parameter Name", "Count"); tmp_df}
   )
 
 tmp_dt <- unique(countryRawData_l[[1]])
@@ -118,9 +118,10 @@ plot(
 
 print(
   xtable(
-    head(countryAggrData_l[[1]][with(countryAggrData_l[[1]], order(-count)), ], 10))
+    head(countryAggrData_l[[1]][with(countryAggrData_l[[1]], order(-Count)), ], 10))
   , type = 'html'
   , html.table.attributes = ''
+  , include.rownames = FALSE
   )
 ```
 
