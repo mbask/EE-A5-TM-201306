@@ -1,0 +1,13 @@
+ascii
+base
+data.table
+DBI
+digest
+googleVis
+plyr
+roxygen2
+RSQLite
+slidify
+sqlutils
+stringr
+xtable
