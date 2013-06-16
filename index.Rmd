@@ -95,7 +95,7 @@ plot(
   gvisMap(
     unique(countryRawData_l[[1]])
     , locationvar = "latLong"
-    #, tipvar      = "tip"
+    , tipvar      = "siteName"
     , options     = list(
       mapType     = 'satellite'
       , useMapTypeControl = TRUE
