@@ -98,8 +98,8 @@ plot(
     , options     = list(
       mapType     = 'satellite'
       , useMapTypeControl = TRUE
-      , width = 1000
-      , height = 600
+      , width = 600
+      , height = 400
       )
     , chartid = "A5Plot"
     )
