@@ -25,7 +25,7 @@ assignInNamespace("cedta.override","slidify","data.table")
 ```
 
 
-```{r "countryFunctions", cache=TRUE, include=FALSE, echo=FALSE}
+```{r "functions", cache=TRUE, include=FALSE, echo=FALSE}
 countryPlot <- function(country_df, id) {
   plot(
     gvisMap(
@@ -38,11 +38,11 @@ countryPlot <- function(country_df, id) {
         , width = 800
         , height = 200
         )
-      , chartid = paste0("CountryPlot", id)
+      , chartid = paste0("CountryAndDomainPlot", id)
       )
     )
   }
-countryData <- function(country_df) {
+printAggrData <- function(country_df) {
   print(
     xtable(
       head(country_df[with(country_df, order(-Sites)), ], 15))
@@ -50,6 +50,20 @@ countryData <- function(country_df) {
       , html.table.attributes = ''
       , include.rownames = FALSE
     )
+}
+aggregatreByParameter <- function(country_df) {
+  if (nrow(country_df) > 0) {
+    tmp_df <- ddply(
+      country_df
+      , .(parameterName)
+      , summarize
+      , Count = length(parameterName)
+      )
+  } else {
+    tmp_df <- data.frame(parameterName = "None", Count = "N/A")
+  }
+  colnames(tmp_df) <- c("Parameter name", "Sites")
+  tmp_df
 }
 ```
 
@@ -62,9 +76,10 @@ sqlPaths("~/Documents/Academy/IBAF/ENVEUROPE/A5Finland/sql")
 db.sqlite.cfg  <- list(
   fName    = "~/Documents/Academy/IBAF/ENVEUROPE/A5/DB/EEA5SiteParameters.db"
   , driver =  dbDriver("SQLite")
-  , query  = list("getAvailableDataByCountry")
-  , queryTitle = list("Uploaded Data")
+  , query  = list("getAvailableDataByCountry", "getAvailableDataByDomain")
+  , queryTitle = list("Uploaded Data by country", "Uploaded data by domain")
   , countryNames = c("Austria", "Bulgaria", "Finland", "Germany", "Hungary", "Italy", "Lithuania", "Poland", "Romania", "Spain", "Sweden")
+  , domainNames = c("Terrestrial", "Freshwater-lake", "Freshwater-river", "Marine")
 )
 
 dbConnection <- with(db.sqlite.cfg, dbConnect(driver, dbname = fName))
@@ -106,8 +121,8 @@ dbConnection <- with(db.sqlite.cfg, dbConnect(driver, dbname = fName))
 ---
 ## Statistiche per Nazione
 
-```{r "countryRawDataQuery", echo=FALSE, cache=FALSE, results='asis', warning=FALSE}
-sqlQueryToDataTable <- function(countryName, sqlQuery = db.sqlite.cfg$query) {
+```{r "countryRawDataQuery", echo=FALSE, cache=FALSE}
+sqlQueryToDataTable <- function(countryName, sqlQuery = db.sqlite.cfg$query[[1]]) {
   data.table(
     execQuery(sqlQuery, connection = dbConnection, countryName = countryName)
     , key = c("siteLTERCode", "siteName", "domainName")
@@ -121,21 +136,6 @@ countryRawData_l <- lapply(
   , function(country_dt) country_dt[, latLong := paste(siteLat, siteLong, sep = ":")]
   )
 
-aggregatreByParameter <- function(country_df) {
-  if (nrow(country_df) > 0) {
-    tmp_df <- ddply(
-      country_df
-      , .(parameterName)
-      , summarize
-      , Count = length(parameterName)
-      )
-  } else {
-    tmp_df <- data.frame(parameterName = "None", Count = "N/A")
-  }
-  colnames(tmp_df) <- c("Parameter name", "Sites")
-  tmp_df
-}
-
 # Aggregate per parameter name
 countryAggrData_l <- countryRawData_l
 countryAggrData_l <- lapply(countryAggrData_l, aggregatreByParameter)
@@ -148,7 +148,7 @@ countryAggrData_l <- lapply(countryAggrData_l, aggregatreByParameter)
 ```{r "Austria", echo=FALSE, cache=FALSE, results='asis', warning=FALSE}
 tmpCountry <- 1
 countryPlot(unique(countryRawData_l[[tmpCountry]]), db.sqlite.cfg$countryNames[tmpCountry])
-countryData(countryAggrData_l[[tmpCountry]])
+printAggrData(countryAggrData_l[[tmpCountry]])
 ```
 
 
@@ -158,7 +158,7 @@ countryData(countryAggrData_l[[tmpCountry]])
 ```{r "Bulgaria", echo=FALSE, cache=FALSE, results='asis', warning=FALSE}
 tmpCountry <- 2
 countryPlot(unique(countryRawData_l[[tmpCountry]]), db.sqlite.cfg$countryNames[tmpCountry])
-countryData(countryAggrData_l[[tmpCountry]])
+printAggrData(countryAggrData_l[[tmpCountry]])
 ```
 
 
@@ -170,7 +170,7 @@ countryData(countryAggrData_l[[tmpCountry]])
 ```{r "Finland", echo=FALSE, cache=FALSE, results='asis', warning=FALSE}
 tmpCountry <- 3
 countryPlot(unique(countryRawData_l[[tmpCountry]]), db.sqlite.cfg$countryNames[tmpCountry])
-countryData(countryAggrData_l[[tmpCountry]])
+printAggrData(countryAggrData_l[[tmpCountry]])
 ```
 
 
@@ -180,7 +180,7 @@ countryData(countryAggrData_l[[tmpCountry]])
 ```{r "Germany", echo=FALSE, cache=FALSE, results='asis', warning=FALSE}
 tmpCountry <- 4
 countryPlot(unique(countryRawData_l[[tmpCountry]]), db.sqlite.cfg$countryNames[tmpCountry])
-countryData(countryAggrData_l[[tmpCountry]])
+printAggrData(countryAggrData_l[[tmpCountry]])
 ```
 
 
@@ -191,7 +191,7 @@ countryData(countryAggrData_l[[tmpCountry]])
 ```{r "Hungary", echo=FALSE, cache=FALSE, results='asis', warning=FALSE}
 tmpCountry <- 5
 countryPlot(unique(countryRawData_l[[tmpCountry]]), db.sqlite.cfg$countryNames[tmpCountry])
-countryData(countryAggrData_l[[tmpCountry]])
+printAggrData(countryAggrData_l[[tmpCountry]])
 ```
 
 
@@ -202,7 +202,7 @@ countryData(countryAggrData_l[[tmpCountry]])
 ```{r "Italy", echo=FALSE, cache=FALSE, results='asis', warning=FALSE}
 tmpCountry <- 6
 countryPlot(unique(countryRawData_l[[tmpCountry]]), db.sqlite.cfg$countryNames[tmpCountry])
-countryData(countryAggrData_l[[tmpCountry]])
+printAggrData(countryAggrData_l[[tmpCountry]])
 ```
 
 
@@ -213,7 +213,7 @@ countryData(countryAggrData_l[[tmpCountry]])
 ```{r "Lithuania", echo=FALSE, cache=FALSE, results='asis', warning=FALSE}
 tmpCountry <- 7
 countryPlot(unique(countryRawData_l[[tmpCountry]]), db.sqlite.cfg$countryNames[tmpCountry])
-countryData(countryAggrData_l[[tmpCountry]])
+printAggrData(countryAggrData_l[[tmpCountry]])
 ```
 
 
@@ -223,7 +223,7 @@ countryData(countryAggrData_l[[tmpCountry]])
 ```{r "Poland", echo=FALSE, cache=FALSE, results='asis', warning=FALSE}
 tmpCountry <- 8
 countryPlot(unique(countryRawData_l[[tmpCountry]]), db.sqlite.cfg$countryNames[tmpCountry])
-countryData(countryAggrData_l[[tmpCountry]])
+printAggrData(countryAggrData_l[[tmpCountry]])
 ```
 
 
@@ -233,7 +233,7 @@ countryData(countryAggrData_l[[tmpCountry]])
 ```{r "Romania", echo=FALSE, cache=FALSE, results='asis', warning=FALSE}
 tmpCountry <- 9
 countryPlot(unique(countryRawData_l[[tmpCountry]]), db.sqlite.cfg$countryNames[tmpCountry])
-countryData(countryAggrData_l[[tmpCountry]])
+printAggrData(countryAggrData_l[[tmpCountry]])
 ```
 
 
@@ -243,7 +243,7 @@ countryData(countryAggrData_l[[tmpCountry]])
 ```{r "Spain", echo=FALSE, cache=FALSE, results='asis', warning=FALSE}
 tmpCountry <- 10
 countryPlot(unique(countryRawData_l[[tmpCountry]]), db.sqlite.cfg$countryNames[tmpCountry])
-countryData(countryAggrData_l[[tmpCountry]])
+printAggrData(countryAggrData_l[[tmpCountry]])
 ```
 
 
@@ -253,18 +253,72 @@ countryData(countryAggrData_l[[tmpCountry]])
 ```{r "Sweden", echo=FALSE, cache=FALSE, results='asis', warning=FALSE}
 tmpCountry <- 11
 countryPlot(unique(countryRawData_l[[tmpCountry]]), db.sqlite.cfg$countryNames[tmpCountry])
-countryData(countryAggrData_l[[tmpCountry]])
+printAggrData(countryAggrData_l[[tmpCountry]])
 ```
 
 
 ---
-## Stat aggregate oer dominio
+## Stat aggregate per dominio
 
 
+```{r "domainRawDataQuery", echo=FALSE, cache=FALSE}
+sqlDomainQueryToDataTable <- function(domainName, sqlQuery = db.sqlite.cfg$query[[2]]) {
+  data.table(
+    execQuery(sqlQuery, connection = dbConnection, domainName = domainName)
+    , key = c("siteLTERCode", "siteName", "domainName")
+  )
+}
+# Get Country data
+domainRawData_l <- lapply(db.sqlite.cfg$domainNames, sqlDomainQueryToDataTable)
+# Convert Lat and Long coordinates in Lat:Long
+domainRawData_l <- lapply(
+  domainRawData_l
+  , function(domain_dt) domain_dt[, latLong := paste(siteLat, siteLong, sep = ":")]
+  )
+# Aggregate per parameter name
+domainAggrData_l <- domainRawData_l
+domainAggrData_l <- lapply(domainAggrData_l, aggregatreByParameter)
+```
 
 
 ---
-## I parametri più misurati per dominio
+## Terrestrial
+
+```{r "Terrestrial", echo=FALSE, cache=FALSE, results='asis', warning=FALSE}
+tmpDomain <- 1
+countryPlot(unique(domainRawData_l[[tmpDomain]]), db.sqlite.cfg$domainNames[tmpDomain])
+printAggrData(domainAggrData_l[[tmpDomain]])
+```
+
+
+---
+## Freshwater-lake
+
+```{r "Freshwater-lake", echo=FALSE, cache=FALSE, results='asis', warning=FALSE}
+tmpDomain <- 2
+countryPlot(unique(domainRawData_l[[tmpDomain]]), db.sqlite.cfg$domainNames[tmpDomain])
+printAggrData(domainAggrData_l[[tmpDomain]])
+```
+
+
+---
+## Freshwater-river
+
+```{r "Freshwater-river", echo=FALSE, cache=FALSE, results='asis', warning=FALSE}
+tmpDomain <- 3
+countryPlot(unique(domainRawData_l[[tmpDomain]]), db.sqlite.cfg$domainNames[tmpDomain])
+printAggrData(domainAggrData_l[[tmpDomain]])
+```
+
+
+---
+## Marine
+
+```{r "Marine", echo=FALSE, cache=FALSE, results='asis', warning=FALSE}
+tmpDomain <- 4
+countryPlot(unique(domainRawData_l[[tmpDomain]]), db.sqlite.cfg$domainNames[tmpDomain])
+printAggrData(domainAggrData_l[[tmpDomain]])
+```
 
 
 ---

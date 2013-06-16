@@ -65,14 +65,14 @@ github:
 ## Austria
 
 <!-- Map generated in R 3.0.1 by googleVis 0.4.3 package -->
-<!-- Sun Jun 16 18:45:36 2013 -->
+<!-- Sun Jun 16 20:54:06 2013 -->
 
 
 <!-- jsHeader -->
 <script type="text/javascript">
  
 // jsData 
-function gvisDataCountryPlotAustria () {
+function gvisDataCountryAndDomainPlotAustria () {
   var data = new google.visualization.DataTable();
   var datajson =
 [
@@ -90,8 +90,8 @@ return(data);
 }
  
 // jsDrawChart
-function drawChartCountryPlotAustria() {
-  var data = gvisDataCountryPlotAustria();
+function drawChartCountryAndDomainPlotAustria() {
+  var data = gvisDataCountryAndDomainPlotAustria();
   var options = {};
 options["showTip"] = true;
 options["mapType"] = "terrain";
@@ -100,7 +100,7 @@ options["width"] =    800;
 options["height"] =    200;
 
      var chart = new google.visualization.Map(
-       document.getElementById('CountryPlotAustria')
+       document.getElementById('CountryAndDomainPlotAustria')
      );
      chart.draw(data,options);
     
@@ -124,9 +124,9 @@ options["height"] =    200;
     pkgs.push(chartid);
 
   // Add the drawChart function to the global list of callbacks
-  callbacks.push(drawChartCountryPlotAustria);
+  callbacks.push(drawChartCountryAndDomainPlotAustria);
 })();
-function displayChartCountryPlotAustria() {
+function displayChartCountryAndDomainPlotAustria() {
   var pkgs = window.__gvisPackages = window.__gvisPackages || [];
   var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
   window.clearTimeout(window.__gvisLoad);
@@ -150,15 +150,15 @@ function displayChartCountryPlotAustria() {
  </script>
  
 <!-- jsChart -->  
-<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartCountryPlotAustria"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartCountryAndDomainPlotAustria"></script>
  
 <!-- divChart -->
   
-<div id="CountryPlotAustria"
+<div id="CountryAndDomainPlotAustria"
   style="width: 800px; height: 200px;">
 </div>
 <!-- html table generated in R 3.0.1 by xtable 1.7-1 package -->
-<!-- Sun Jun 16 18:45:36 2013 -->
+<!-- Sun Jun 16 20:54:06 2013 -->
 <TABLE >
 <TR> <TH> Parameter name </TH> <TH> Sites </TH>  </TR>
   <TR> <TD> Annual mean temperature and precipitation (snow where relevant) </TD> <TD align="right">   1 </TD> </TR>
@@ -171,14 +171,14 @@ function displayChartCountryPlotAustria() {
 ## Bulgaria
 
 <!-- Map generated in R 3.0.1 by googleVis 0.4.3 package -->
-<!-- Sun Jun 16 18:45:36 2013 -->
+<!-- Sun Jun 16 20:54:06 2013 -->
 
 
 <!-- jsHeader -->
 <script type="text/javascript">
  
 // jsData 
-function gvisDataCountryPlotBulgaria () {
+function gvisDataCountryAndDomainPlotBulgaria () {
   var data = new google.visualization.DataTable();
   var datajson =
 [
@@ -201,8 +201,8 @@ return(data);
 }
  
 // jsDrawChart
-function drawChartCountryPlotBulgaria() {
-  var data = gvisDataCountryPlotBulgaria();
+function drawChartCountryAndDomainPlotBulgaria() {
+  var data = gvisDataCountryAndDomainPlotBulgaria();
   var options = {};
 options["showTip"] = true;
 options["mapType"] = "terrain";
@@ -211,7 +211,7 @@ options["width"] =    800;
 options["height"] =    200;
 
      var chart = new google.visualization.Map(
-       document.getElementById('CountryPlotBulgaria')
+       document.getElementById('CountryAndDomainPlotBulgaria')
      );
      chart.draw(data,options);
     
@@ -235,9 +235,9 @@ options["height"] =    200;
     pkgs.push(chartid);
 
   // Add the drawChart function to the global list of callbacks
-  callbacks.push(drawChartCountryPlotBulgaria);
+  callbacks.push(drawChartCountryAndDomainPlotBulgaria);
 })();
-function displayChartCountryPlotBulgaria() {
+function displayChartCountryAndDomainPlotBulgaria() {
   var pkgs = window.__gvisPackages = window.__gvisPackages || [];
   var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
   window.clearTimeout(window.__gvisLoad);
@@ -261,15 +261,15 @@ function displayChartCountryPlotBulgaria() {
  </script>
  
 <!-- jsChart -->  
-<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartCountryPlotBulgaria"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartCountryAndDomainPlotBulgaria"></script>
  
 <!-- divChart -->
   
-<div id="CountryPlotBulgaria"
+<div id="CountryAndDomainPlotBulgaria"
   style="width: 800px; height: 200px;">
 </div>
 <!-- html table generated in R 3.0.1 by xtable 1.7-1 package -->
-<!-- Sun Jun 16 18:45:36 2013 -->
+<!-- Sun Jun 16 20:54:06 2013 -->
 <TABLE >
 <TR> <TH> Parameter name </TH> <TH> Sites </TH>  </TR>
   <TR> <TD> Physical/chemical characteristics: temperature </TD> <TD align="right">   2 </TD> </TR>
@@ -293,14 +293,14 @@ function displayChartCountryPlotBulgaria() {
 ## Finland
 
 <!-- Map generated in R 3.0.1 by googleVis 0.4.3 package -->
-<!-- Sun Jun 16 18:45:36 2013 -->
+<!-- Sun Jun 16 20:54:06 2013 -->
 
 
 <!-- jsHeader -->
 <script type="text/javascript">
  
 // jsData 
-function gvisDataCountryPlotFinland () {
+function gvisDataCountryAndDomainPlotFinland () {
   var data = new google.visualization.DataTable();
   var datajson =
 [
@@ -316,8 +316,8 @@ return(data);
 }
  
 // jsDrawChart
-function drawChartCountryPlotFinland() {
-  var data = gvisDataCountryPlotFinland();
+function drawChartCountryAndDomainPlotFinland() {
+  var data = gvisDataCountryAndDomainPlotFinland();
   var options = {};
 options["showTip"] = true;
 options["mapType"] = "terrain";
@@ -326,7 +326,7 @@ options["width"] =    800;
 options["height"] =    200;
 
      var chart = new google.visualization.Map(
-       document.getElementById('CountryPlotFinland')
+       document.getElementById('CountryAndDomainPlotFinland')
      );
      chart.draw(data,options);
     
@@ -350,9 +350,9 @@ options["height"] =    200;
     pkgs.push(chartid);
 
   // Add the drawChart function to the global list of callbacks
-  callbacks.push(drawChartCountryPlotFinland);
+  callbacks.push(drawChartCountryAndDomainPlotFinland);
 })();
-function displayChartCountryPlotFinland() {
+function displayChartCountryAndDomainPlotFinland() {
   var pkgs = window.__gvisPackages = window.__gvisPackages || [];
   var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
   window.clearTimeout(window.__gvisLoad);
@@ -376,15 +376,15 @@ function displayChartCountryPlotFinland() {
  </script>
  
 <!-- jsChart -->  
-<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartCountryPlotFinland"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartCountryAndDomainPlotFinland"></script>
  
 <!-- divChart -->
   
-<div id="CountryPlotFinland"
+<div id="CountryAndDomainPlotFinland"
   style="width: 800px; height: 200px;">
 </div>
 <!-- html table generated in R 3.0.1 by xtable 1.7-1 package -->
-<!-- Sun Jun 16 18:45:36 2013 -->
+<!-- Sun Jun 16 20:54:06 2013 -->
 <TABLE >
 <TR> <TH> Parameter name </TH> <TH> Sites </TH>  </TR>
   <TR> <TD> None </TD> <TD> N/A </TD> </TR>
@@ -396,14 +396,14 @@ function displayChartCountryPlotFinland() {
 ## Germany
 
 <!-- Map generated in R 3.0.1 by googleVis 0.4.3 package -->
-<!-- Sun Jun 16 18:45:36 2013 -->
+<!-- Sun Jun 16 20:54:06 2013 -->
 
 
 <!-- jsHeader -->
 <script type="text/javascript">
  
 // jsData 
-function gvisDataCountryPlotGermany () {
+function gvisDataCountryAndDomainPlotGermany () {
   var data = new google.visualization.DataTable();
   var datajson =
 [
@@ -441,8 +441,8 @@ return(data);
 }
  
 // jsDrawChart
-function drawChartCountryPlotGermany() {
-  var data = gvisDataCountryPlotGermany();
+function drawChartCountryAndDomainPlotGermany() {
+  var data = gvisDataCountryAndDomainPlotGermany();
   var options = {};
 options["showTip"] = true;
 options["mapType"] = "terrain";
@@ -451,7 +451,7 @@ options["width"] =    800;
 options["height"] =    200;
 
      var chart = new google.visualization.Map(
-       document.getElementById('CountryPlotGermany')
+       document.getElementById('CountryAndDomainPlotGermany')
      );
      chart.draw(data,options);
     
@@ -475,9 +475,9 @@ options["height"] =    200;
     pkgs.push(chartid);
 
   // Add the drawChart function to the global list of callbacks
-  callbacks.push(drawChartCountryPlotGermany);
+  callbacks.push(drawChartCountryAndDomainPlotGermany);
 })();
-function displayChartCountryPlotGermany() {
+function displayChartCountryAndDomainPlotGermany() {
   var pkgs = window.__gvisPackages = window.__gvisPackages || [];
   var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
   window.clearTimeout(window.__gvisLoad);
@@ -501,15 +501,15 @@ function displayChartCountryPlotGermany() {
  </script>
  
 <!-- jsChart -->  
-<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartCountryPlotGermany"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartCountryAndDomainPlotGermany"></script>
  
 <!-- divChart -->
   
-<div id="CountryPlotGermany"
+<div id="CountryAndDomainPlotGermany"
   style="width: 800px; height: 200px;">
 </div>
 <!-- html table generated in R 3.0.1 by xtable 1.7-1 package -->
-<!-- Sun Jun 16 18:45:36 2013 -->
+<!-- Sun Jun 16 20:54:06 2013 -->
 <TABLE >
 <TR> <TH> Parameter name </TH> <TH> Sites </TH>  </TR>
   <TR> <TD> Physical/chemical characteristics: temperature </TD> <TD align="right">   3 </TD> </TR>
@@ -536,14 +536,14 @@ function displayChartCountryPlotGermany() {
 ## Hungary
 
 <!-- Map generated in R 3.0.1 by googleVis 0.4.3 package -->
-<!-- Sun Jun 16 18:45:36 2013 -->
+<!-- Sun Jun 16 20:54:06 2013 -->
 
 
 <!-- jsHeader -->
 <script type="text/javascript">
  
 // jsData 
-function gvisDataCountryPlotHungary () {
+function gvisDataCountryAndDomainPlotHungary () {
   var data = new google.visualization.DataTable();
   var datajson =
 [
@@ -571,8 +571,8 @@ return(data);
 }
  
 // jsDrawChart
-function drawChartCountryPlotHungary() {
-  var data = gvisDataCountryPlotHungary();
+function drawChartCountryAndDomainPlotHungary() {
+  var data = gvisDataCountryAndDomainPlotHungary();
   var options = {};
 options["showTip"] = true;
 options["mapType"] = "terrain";
@@ -581,7 +581,7 @@ options["width"] =    800;
 options["height"] =    200;
 
      var chart = new google.visualization.Map(
-       document.getElementById('CountryPlotHungary')
+       document.getElementById('CountryAndDomainPlotHungary')
      );
      chart.draw(data,options);
     
@@ -605,9 +605,9 @@ options["height"] =    200;
     pkgs.push(chartid);
 
   // Add the drawChart function to the global list of callbacks
-  callbacks.push(drawChartCountryPlotHungary);
+  callbacks.push(drawChartCountryAndDomainPlotHungary);
 })();
-function displayChartCountryPlotHungary() {
+function displayChartCountryAndDomainPlotHungary() {
   var pkgs = window.__gvisPackages = window.__gvisPackages || [];
   var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
   window.clearTimeout(window.__gvisLoad);
@@ -631,15 +631,15 @@ function displayChartCountryPlotHungary() {
  </script>
  
 <!-- jsChart -->  
-<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartCountryPlotHungary"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartCountryAndDomainPlotHungary"></script>
  
 <!-- divChart -->
   
-<div id="CountryPlotHungary"
+<div id="CountryAndDomainPlotHungary"
   style="width: 800px; height: 200px;">
 </div>
 <!-- html table generated in R 3.0.1 by xtable 1.7-1 package -->
-<!-- Sun Jun 16 18:45:36 2013 -->
+<!-- Sun Jun 16 20:54:06 2013 -->
 <TABLE >
 <TR> <TH> Parameter name </TH> <TH> Sites </TH>  </TR>
   <TR> <TD> Global radiation reaching the site </TD> <TD align="right">   2 </TD> </TR>
@@ -666,14 +666,14 @@ function displayChartCountryPlotHungary() {
 ## Italy
 
 <!-- Map generated in R 3.0.1 by googleVis 0.4.3 package -->
-<!-- Sun Jun 16 18:45:36 2013 -->
+<!-- Sun Jun 16 20:54:06 2013 -->
 
 
 <!-- jsHeader -->
 <script type="text/javascript">
  
 // jsData 
-function gvisDataCountryPlotItaly () {
+function gvisDataCountryAndDomainPlotItaly () {
   var data = new google.visualization.DataTable();
   var datajson =
 [
@@ -741,8 +741,8 @@ return(data);
 }
  
 // jsDrawChart
-function drawChartCountryPlotItaly() {
-  var data = gvisDataCountryPlotItaly();
+function drawChartCountryAndDomainPlotItaly() {
+  var data = gvisDataCountryAndDomainPlotItaly();
   var options = {};
 options["showTip"] = true;
 options["mapType"] = "terrain";
@@ -751,7 +751,7 @@ options["width"] =    800;
 options["height"] =    200;
 
      var chart = new google.visualization.Map(
-       document.getElementById('CountryPlotItaly')
+       document.getElementById('CountryAndDomainPlotItaly')
      );
      chart.draw(data,options);
     
@@ -775,9 +775,9 @@ options["height"] =    200;
     pkgs.push(chartid);
 
   // Add the drawChart function to the global list of callbacks
-  callbacks.push(drawChartCountryPlotItaly);
+  callbacks.push(drawChartCountryAndDomainPlotItaly);
 })();
-function displayChartCountryPlotItaly() {
+function displayChartCountryAndDomainPlotItaly() {
   var pkgs = window.__gvisPackages = window.__gvisPackages || [];
   var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
   window.clearTimeout(window.__gvisLoad);
@@ -801,15 +801,15 @@ function displayChartCountryPlotItaly() {
  </script>
  
 <!-- jsChart -->  
-<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartCountryPlotItaly"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartCountryAndDomainPlotItaly"></script>
  
 <!-- divChart -->
   
-<div id="CountryPlotItaly"
+<div id="CountryAndDomainPlotItaly"
   style="width: 800px; height: 200px;">
 </div>
 <!-- html table generated in R 3.0.1 by xtable 1.7-1 package -->
-<!-- Sun Jun 16 18:45:36 2013 -->
+<!-- Sun Jun 16 20:54:06 2013 -->
 <TABLE >
 <TR> <TH> Parameter name </TH> <TH> Sites </TH>  </TR>
   <TR> <TD> Physical/chemical characteristics: oxygen </TD> <TD align="right">  10 </TD> </TR>
@@ -836,14 +836,14 @@ function displayChartCountryPlotItaly() {
 ## Lithuania
 
 <!-- Map generated in R 3.0.1 by googleVis 0.4.3 package -->
-<!-- Sun Jun 16 18:45:36 2013 -->
+<!-- Sun Jun 16 20:54:06 2013 -->
 
 
 <!-- jsHeader -->
 <script type="text/javascript">
  
 // jsData 
-function gvisDataCountryPlotLithuania () {
+function gvisDataCountryAndDomainPlotLithuania () {
   var data = new google.visualization.DataTable();
   var datajson =
 [
@@ -871,8 +871,8 @@ return(data);
 }
  
 // jsDrawChart
-function drawChartCountryPlotLithuania() {
-  var data = gvisDataCountryPlotLithuania();
+function drawChartCountryAndDomainPlotLithuania() {
+  var data = gvisDataCountryAndDomainPlotLithuania();
   var options = {};
 options["showTip"] = true;
 options["mapType"] = "terrain";
@@ -881,7 +881,7 @@ options["width"] =    800;
 options["height"] =    200;
 
      var chart = new google.visualization.Map(
-       document.getElementById('CountryPlotLithuania')
+       document.getElementById('CountryAndDomainPlotLithuania')
      );
      chart.draw(data,options);
     
@@ -905,9 +905,9 @@ options["height"] =    200;
     pkgs.push(chartid);
 
   // Add the drawChart function to the global list of callbacks
-  callbacks.push(drawChartCountryPlotLithuania);
+  callbacks.push(drawChartCountryAndDomainPlotLithuania);
 })();
-function displayChartCountryPlotLithuania() {
+function displayChartCountryAndDomainPlotLithuania() {
   var pkgs = window.__gvisPackages = window.__gvisPackages || [];
   var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
   window.clearTimeout(window.__gvisLoad);
@@ -931,15 +931,15 @@ function displayChartCountryPlotLithuania() {
  </script>
  
 <!-- jsChart -->  
-<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartCountryPlotLithuania"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartCountryAndDomainPlotLithuania"></script>
  
 <!-- divChart -->
   
-<div id="CountryPlotLithuania"
+<div id="CountryAndDomainPlotLithuania"
   style="width: 800px; height: 200px;">
 </div>
 <!-- html table generated in R 3.0.1 by xtable 1.7-1 package -->
-<!-- Sun Jun 16 18:45:36 2013 -->
+<!-- Sun Jun 16 20:54:06 2013 -->
 <TABLE >
 <TR> <TH> Parameter name </TH> <TH> Sites </TH>  </TR>
   <TR> <TD> Soil C/N </TD> <TD align="right">   5 </TD> </TR>
@@ -965,14 +965,14 @@ function displayChartCountryPlotLithuania() {
 ## Poland
 
 <!-- Map generated in R 3.0.1 by googleVis 0.4.3 package -->
-<!-- Sun Jun 16 18:45:36 2013 -->
+<!-- Sun Jun 16 20:54:06 2013 -->
 
 
 <!-- jsHeader -->
 <script type="text/javascript">
  
 // jsData 
-function gvisDataCountryPlotPoland () {
+function gvisDataCountryAndDomainPlotPoland () {
   var data = new google.visualization.DataTable();
   var datajson =
 [
@@ -1040,8 +1040,8 @@ return(data);
 }
  
 // jsDrawChart
-function drawChartCountryPlotPoland() {
-  var data = gvisDataCountryPlotPoland();
+function drawChartCountryAndDomainPlotPoland() {
+  var data = gvisDataCountryAndDomainPlotPoland();
   var options = {};
 options["showTip"] = true;
 options["mapType"] = "terrain";
@@ -1050,7 +1050,7 @@ options["width"] =    800;
 options["height"] =    200;
 
      var chart = new google.visualization.Map(
-       document.getElementById('CountryPlotPoland')
+       document.getElementById('CountryAndDomainPlotPoland')
      );
      chart.draw(data,options);
     
@@ -1074,9 +1074,9 @@ options["height"] =    200;
     pkgs.push(chartid);
 
   // Add the drawChart function to the global list of callbacks
-  callbacks.push(drawChartCountryPlotPoland);
+  callbacks.push(drawChartCountryAndDomainPlotPoland);
 })();
-function displayChartCountryPlotPoland() {
+function displayChartCountryAndDomainPlotPoland() {
   var pkgs = window.__gvisPackages = window.__gvisPackages || [];
   var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
   window.clearTimeout(window.__gvisLoad);
@@ -1100,15 +1100,15 @@ function displayChartCountryPlotPoland() {
  </script>
  
 <!-- jsChart -->  
-<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartCountryPlotPoland"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartCountryAndDomainPlotPoland"></script>
  
 <!-- divChart -->
   
-<div id="CountryPlotPoland"
+<div id="CountryAndDomainPlotPoland"
   style="width: 800px; height: 200px;">
 </div>
 <!-- html table generated in R 3.0.1 by xtable 1.7-1 package -->
-<!-- Sun Jun 16 18:45:36 2013 -->
+<!-- Sun Jun 16 20:54:06 2013 -->
 <TABLE >
 <TR> <TH> Parameter name </TH> <TH> Sites </TH>  </TR>
   <TR> <TD> Annual mean temperature and precipitation (snow where relevant) </TD> <TD align="right">   4 </TD> </TR>
@@ -1134,14 +1134,14 @@ function displayChartCountryPlotPoland() {
 ## Romania
 
 <!-- Map generated in R 3.0.1 by googleVis 0.4.3 package -->
-<!-- Sun Jun 16 18:45:36 2013 -->
+<!-- Sun Jun 16 20:54:06 2013 -->
 
 
 <!-- jsHeader -->
 <script type="text/javascript">
  
 // jsData 
-function gvisDataCountryPlotRomania () {
+function gvisDataCountryAndDomainPlotRomania () {
   var data = new google.visualization.DataTable();
   var datajson =
 [
@@ -1159,8 +1159,8 @@ return(data);
 }
  
 // jsDrawChart
-function drawChartCountryPlotRomania() {
-  var data = gvisDataCountryPlotRomania();
+function drawChartCountryAndDomainPlotRomania() {
+  var data = gvisDataCountryAndDomainPlotRomania();
   var options = {};
 options["showTip"] = true;
 options["mapType"] = "terrain";
@@ -1169,7 +1169,7 @@ options["width"] =    800;
 options["height"] =    200;
 
      var chart = new google.visualization.Map(
-       document.getElementById('CountryPlotRomania')
+       document.getElementById('CountryAndDomainPlotRomania')
      );
      chart.draw(data,options);
     
@@ -1193,9 +1193,9 @@ options["height"] =    200;
     pkgs.push(chartid);
 
   // Add the drawChart function to the global list of callbacks
-  callbacks.push(drawChartCountryPlotRomania);
+  callbacks.push(drawChartCountryAndDomainPlotRomania);
 })();
-function displayChartCountryPlotRomania() {
+function displayChartCountryAndDomainPlotRomania() {
   var pkgs = window.__gvisPackages = window.__gvisPackages || [];
   var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
   window.clearTimeout(window.__gvisLoad);
@@ -1219,15 +1219,15 @@ function displayChartCountryPlotRomania() {
  </script>
  
 <!-- jsChart -->  
-<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartCountryPlotRomania"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartCountryAndDomainPlotRomania"></script>
  
 <!-- divChart -->
   
-<div id="CountryPlotRomania"
+<div id="CountryAndDomainPlotRomania"
   style="width: 800px; height: 200px;">
 </div>
 <!-- html table generated in R 3.0.1 by xtable 1.7-1 package -->
-<!-- Sun Jun 16 18:45:36 2013 -->
+<!-- Sun Jun 16 20:54:06 2013 -->
 <TABLE >
 <TR> <TH> Parameter name </TH> <TH> Sites </TH>  </TR>
   <TR> <TD> Aboveground biomass by indirect methods </TD> <TD align="right">   1 </TD> </TR>
@@ -1253,14 +1253,14 @@ function displayChartCountryPlotRomania() {
 ## Spain
 
 <!-- Map generated in R 3.0.1 by googleVis 0.4.3 package -->
-<!-- Sun Jun 16 18:45:36 2013 -->
+<!-- Sun Jun 16 20:54:06 2013 -->
 
 
 <!-- jsHeader -->
 <script type="text/javascript">
  
 // jsData 
-function gvisDataCountryPlotSpain () {
+function gvisDataCountryAndDomainPlotSpain () {
   var data = new google.visualization.DataTable();
   var datajson =
 [
@@ -1293,8 +1293,8 @@ return(data);
 }
  
 // jsDrawChart
-function drawChartCountryPlotSpain() {
-  var data = gvisDataCountryPlotSpain();
+function drawChartCountryAndDomainPlotSpain() {
+  var data = gvisDataCountryAndDomainPlotSpain();
   var options = {};
 options["showTip"] = true;
 options["mapType"] = "terrain";
@@ -1303,7 +1303,7 @@ options["width"] =    800;
 options["height"] =    200;
 
      var chart = new google.visualization.Map(
-       document.getElementById('CountryPlotSpain')
+       document.getElementById('CountryAndDomainPlotSpain')
      );
      chart.draw(data,options);
     
@@ -1327,9 +1327,9 @@ options["height"] =    200;
     pkgs.push(chartid);
 
   // Add the drawChart function to the global list of callbacks
-  callbacks.push(drawChartCountryPlotSpain);
+  callbacks.push(drawChartCountryAndDomainPlotSpain);
 })();
-function displayChartCountryPlotSpain() {
+function displayChartCountryAndDomainPlotSpain() {
   var pkgs = window.__gvisPackages = window.__gvisPackages || [];
   var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
   window.clearTimeout(window.__gvisLoad);
@@ -1353,15 +1353,15 @@ function displayChartCountryPlotSpain() {
  </script>
  
 <!-- jsChart -->  
-<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartCountryPlotSpain"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartCountryAndDomainPlotSpain"></script>
  
 <!-- divChart -->
   
-<div id="CountryPlotSpain"
+<div id="CountryAndDomainPlotSpain"
   style="width: 800px; height: 200px;">
 </div>
 <!-- html table generated in R 3.0.1 by xtable 1.7-1 package -->
-<!-- Sun Jun 16 18:45:36 2013 -->
+<!-- Sun Jun 16 20:54:06 2013 -->
 <TABLE >
 <TR> <TH> Parameter name </TH> <TH> Sites </TH>  </TR>
   <TR> <TD> Annual mean temperature and precipitation (snow where relevant) </TD> <TD align="right">   3 </TD> </TR>
@@ -1387,14 +1387,14 @@ function displayChartCountryPlotSpain() {
 ## Sweden
 
 <!-- Map generated in R 3.0.1 by googleVis 0.4.3 package -->
-<!-- Sun Jun 16 18:45:36 2013 -->
+<!-- Sun Jun 16 20:54:06 2013 -->
 
 
 <!-- jsHeader -->
 <script type="text/javascript">
  
 // jsData 
-function gvisDataCountryPlotSweden () {
+function gvisDataCountryAndDomainPlotSweden () {
   var data = new google.visualization.DataTable();
   var datajson =
 [
@@ -1427,8 +1427,8 @@ return(data);
 }
  
 // jsDrawChart
-function drawChartCountryPlotSweden() {
-  var data = gvisDataCountryPlotSweden();
+function drawChartCountryAndDomainPlotSweden() {
+  var data = gvisDataCountryAndDomainPlotSweden();
   var options = {};
 options["showTip"] = true;
 options["mapType"] = "terrain";
@@ -1437,7 +1437,7 @@ options["width"] =    800;
 options["height"] =    200;
 
      var chart = new google.visualization.Map(
-       document.getElementById('CountryPlotSweden')
+       document.getElementById('CountryAndDomainPlotSweden')
      );
      chart.draw(data,options);
     
@@ -1461,9 +1461,9 @@ options["height"] =    200;
     pkgs.push(chartid);
 
   // Add the drawChart function to the global list of callbacks
-  callbacks.push(drawChartCountryPlotSweden);
+  callbacks.push(drawChartCountryAndDomainPlotSweden);
 })();
-function displayChartCountryPlotSweden() {
+function displayChartCountryAndDomainPlotSweden() {
   var pkgs = window.__gvisPackages = window.__gvisPackages || [];
   var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
   window.clearTimeout(window.__gvisLoad);
@@ -1487,15 +1487,15 @@ function displayChartCountryPlotSweden() {
  </script>
  
 <!-- jsChart -->  
-<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartCountryPlotSweden"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartCountryAndDomainPlotSweden"></script>
  
 <!-- divChart -->
   
-<div id="CountryPlotSweden"
+<div id="CountryAndDomainPlotSweden"
   style="width: 800px; height: 200px;">
 </div>
 <!-- html table generated in R 3.0.1 by xtable 1.7-1 package -->
-<!-- Sun Jun 16 18:45:36 2013 -->
+<!-- Sun Jun 16 20:54:06 2013 -->
 <TABLE >
 <TR> <TH> Parameter name </TH> <TH> Sites </TH>  </TR>
   <TR> <TD> Aboveground Net Primary Production </TD> <TD align="right">   4 </TD> </TR>
@@ -1518,13 +1518,684 @@ function displayChartCountryPlotSweden() {
 
 
 ---
-## Stat aggregate oer dominio
+## Stat aggregate per dominio
+
+
 
 
 
 
 ---
-## I parametri più misurati per dominio
+## Terrestrial
+
+<!-- Map generated in R 3.0.1 by googleVis 0.4.3 package -->
+<!-- Sun Jun 16 20:54:07 2013 -->
+
+
+<!-- jsHeader -->
+<script type="text/javascript">
+ 
+// jsData 
+function gvisDataCountryAndDomainPlotTerrestrial () {
+  var data = new google.visualization.DataTable();
+  var datajson =
+[
+ [
+ 52.2983,
+20.808964,
+"Kampinos" 
+],
+[
+ 50.58333,
+6.43333,
+"NP Eifel" 
+],
+[
+ 52.5,
+14.13333,
+"Uckermark" 
+],
+[
+ 47.9,
+20.45,
+"Síkfőkút " 
+],
+[
+ 55.4408,
+26.0681,
+"Aukstaitija" 
+],
+[
+ 56.0117,
+21.8758,
+"Zemaitija" 
+],
+[
+ 49.66861,
+18.943611,
+"Brenna" 
+],
+[
+ 45.43333,
+25.333333,
+"Bucegi Piatra Craiului" 
+],
+[
+ 57.0833,
+14.5333,
+"Aneboda" 
+],
+[
+ 63.85,
+18.1,
+"Gammtratten" 
+],
+[
+ 58.05,
+12.0167,
+"Gårdsjön" 
+],
+[
+ 59.75,
+14.9,
+"Central Swedish uplands spruce forest – Kindla" 
+],
+[
+ 46.8,
+19.38333,
+"Kiskun" 
+],
+[
+ 37.08553,
+-3.187476,
+"Sierra Nevada" 
+],
+[
+ 36.97,
+-6.39,
+"Doñana" 
+],
+[
+ 42.626364,
+-0.00379,
+"Ordesa" 
+],
+[
+ 47.56667,
+11.63333,
+"Achenkirch-Mühlegger Köpfl" 
+],
+[
+ 52.75,
+23.866667,
+"Primaeval Bialowieza Forest" 
+],
+[
+ 54.695575,
+17.46695,
+"Slowinski National Park" 
+],
+[
+ 49.19667,
+19.890833,
+"Tatrzański National Park" 
+],
+[
+ 51.50833,
+22.415,
+"West Polesie Biosphere Reserve" 
+],
+[
+ 55.45955,
+21.078057,
+"Curonian Spit National Park" 
+],
+[
+ 42.04166667,
+14.83888889,
+"Foce Trigno-Marina di Petacciato (Campobasso)" 
+] 
+];
+data.addColumn('number','Latitude');
+data.addColumn('number','Longitude');
+data.addColumn('string','siteName');
+data.addRows(datajson);
+return(data);
+}
+ 
+// jsDrawChart
+function drawChartCountryAndDomainPlotTerrestrial() {
+  var data = gvisDataCountryAndDomainPlotTerrestrial();
+  var options = {};
+options["showTip"] = true;
+options["mapType"] = "terrain";
+options["useMapTypeControl"] = true;
+options["width"] =    800;
+options["height"] =    200;
+
+     var chart = new google.visualization.Map(
+       document.getElementById('CountryAndDomainPlotTerrestrial')
+     );
+     chart.draw(data,options);
+    
+
+}
+  
+ 
+// jsDisplayChart
+(function() {
+  var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+  var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+  var chartid = "map";
+
+  // Manually see if chartid is in pkgs (not all browsers support Array.indexOf)
+  var i, newPackage = true;
+  for (i = 0; newPackage && i < pkgs.length; i++) {
+    if (pkgs[i] === chartid)
+      newPackage = false;
+  }
+  if (newPackage)
+    pkgs.push(chartid);
+
+  // Add the drawChart function to the global list of callbacks
+  callbacks.push(drawChartCountryAndDomainPlotTerrestrial);
+})();
+function displayChartCountryAndDomainPlotTerrestrial() {
+  var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+  var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+  window.clearTimeout(window.__gvisLoad);
+  // The timeout is set to 100 because otherwise the container div we are
+  // targeting might not be part of the document yet
+  window.__gvisLoad = setTimeout(function() {
+    var pkgCount = pkgs.length;
+    google.load("visualization", "1", { packages:pkgs, callback: function() {
+      if (pkgCount != pkgs.length) {
+        // Race condition where another setTimeout call snuck in after us; if
+        // that call added a package, we must not shift its callback
+        return;
+      }
+      while (callbacks.length > 0)
+        callbacks.shift()();
+    } });
+  }, 100);
+}
+ 
+// jsFooter
+ </script>
+ 
+<!-- jsChart -->  
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartCountryAndDomainPlotTerrestrial"></script>
+ 
+<!-- divChart -->
+  
+<div id="CountryAndDomainPlotTerrestrial"
+  style="width: 800px; height: 200px;">
+</div>
+<!-- html table generated in R 3.0.1 by xtable 1.7-1 package -->
+<!-- Sun Jun 16 20:54:07 2013 -->
+<TABLE >
+<TR> <TH> Parameter name </TH> <TH> Sites </TH>  </TR>
+  <TR> <TD> Annual mean temperature and precipitation (snow where relevant) </TD> <TD align="right">  20 </TD> </TR>
+  <TR> <TD> Monthly precipitation and mean temperature (min, max mean temperature) </TD> <TD align="right">  19 </TD> </TR>
+  <TR> <TD> Other main meteorological variables </TD> <TD align="right">  16 </TD> </TR>
+  <TR> <TD> Soil C/N </TD> <TD align="right">  14 </TD> </TR>
+  <TR> <TD> Vascular plant coverage </TD> <TD align="right">  13 </TD> </TR>
+  <TR> <TD> Vascular plant species list </TD> <TD align="right">  13 </TD> </TR>
+  <TR> <TD> Atmospheric deposition of main nutrients/pollutants </TD> <TD align="right">  12 </TD> </TR>
+  <TR> <TD> Chemistry of precipitation and snow </TD> <TD align="right">  12 </TD> </TR>
+  <TR> <TD> Vascular plant abundance </TD> <TD align="right">  12 </TD> </TR>
+  <TR> <TD> Cover of CORINE/EUNIS land uses and habitats </TD> <TD align="right">  11 </TD> </TR>
+  <TR> <TD> Global radiation reaching the site </TD> <TD align="right">  11 </TD> </TR>
+  <TR> <TD> Health status of ecosystem (e.g. crown transparency, defoliation, more complex assessment) </TD> <TD align="right">  11 </TD> </TR>
+  <TR> <TD> Within habitat diversity </TD> <TD align="right">  10 </TD> </TR>
+  <TR> <TD> Soil water content </TD> <TD align="right">   9 </TD> </TR>
+  <TR> <TD> Aboveground Net Primary Production </TD> <TD align="right">   8 </TD> </TR>
+   </TABLE>
+
+
+
+---
+## Freshwater-lake
+
+<!-- Map generated in R 3.0.1 by googleVis 0.4.3 package -->
+<!-- Sun Jun 16 20:54:07 2013 -->
+
+
+<!-- jsHeader -->
+<script type="text/javascript">
+ 
+// jsData 
+function gvisDataCountryAndDomainPlotFreshwater-lake () {
+  var data = new google.visualization.DataTable();
+  var datajson =
+[
+ [
+ 44.1,
+27.07,
+"Srebarna" 
+],
+[
+ 49.19159399,
+20.07261086,
+"Czarny Staw" 
+],
+[
+ 49.19159399,
+20.07261086,
+"Morskie Oko" 
+],
+[
+ 45.72361,
+8.911367,
+"Lake Maggiore" 
+],
+[
+ 44.3819,
+10.0457,
+"Lake Scuro Parmense" 
+],
+[
+ 44.4025,
+10.29,
+"Lake Santo Parmense" 
+],
+[
+ 40.54483333,
+8.94383333,
+"Lake Cedrino" 
+],
+[
+ 40.54483,
+8.943833,
+"Lake Temo" 
+],
+[
+ 46.83333,
+17.7,
+"Balaton" 
+],
+[
+ 36.97,
+-6.39,
+"Doñana" 
+],
+[
+ 51.43333,
+19.916667,
+"Sulejowski Reservoir" 
+],
+[
+ 51.50833,
+22.415,
+"West Polesie Biosphere Reserve" 
+],
+[
+ 53.77094,
+21.603756,
+"Mikołajskie" 
+] 
+];
+data.addColumn('number','Latitude');
+data.addColumn('number','Longitude');
+data.addColumn('string','siteName');
+data.addRows(datajson);
+return(data);
+}
+ 
+// jsDrawChart
+function drawChartCountryAndDomainPlotFreshwater-lake() {
+  var data = gvisDataCountryAndDomainPlotFreshwater-lake();
+  var options = {};
+options["showTip"] = true;
+options["mapType"] = "terrain";
+options["useMapTypeControl"] = true;
+options["width"] =    800;
+options["height"] =    200;
+
+     var chart = new google.visualization.Map(
+       document.getElementById('CountryAndDomainPlotFreshwater-lake')
+     );
+     chart.draw(data,options);
+    
+
+}
+  
+ 
+// jsDisplayChart
+(function() {
+  var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+  var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+  var chartid = "map";
+
+  // Manually see if chartid is in pkgs (not all browsers support Array.indexOf)
+  var i, newPackage = true;
+  for (i = 0; newPackage && i < pkgs.length; i++) {
+    if (pkgs[i] === chartid)
+      newPackage = false;
+  }
+  if (newPackage)
+    pkgs.push(chartid);
+
+  // Add the drawChart function to the global list of callbacks
+  callbacks.push(drawChartCountryAndDomainPlotFreshwater-lake);
+})();
+function displayChartCountryAndDomainPlotFreshwater-lake() {
+  var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+  var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+  window.clearTimeout(window.__gvisLoad);
+  // The timeout is set to 100 because otherwise the container div we are
+  // targeting might not be part of the document yet
+  window.__gvisLoad = setTimeout(function() {
+    var pkgCount = pkgs.length;
+    google.load("visualization", "1", { packages:pkgs, callback: function() {
+      if (pkgCount != pkgs.length) {
+        // Race condition where another setTimeout call snuck in after us; if
+        // that call added a package, we must not shift its callback
+        return;
+      }
+      while (callbacks.length > 0)
+        callbacks.shift()();
+    } });
+  }, 100);
+}
+ 
+// jsFooter
+ </script>
+ 
+<!-- jsChart -->  
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartCountryAndDomainPlotFreshwater-lake"></script>
+ 
+<!-- divChart -->
+  
+<div id="CountryAndDomainPlotFreshwater-lake"
+  style="width: 800px; height: 200px;">
+</div>
+<!-- html table generated in R 3.0.1 by xtable 1.7-1 package -->
+<!-- Sun Jun 16 20:54:07 2013 -->
+<TABLE >
+<TR> <TH> Parameter name </TH> <TH> Sites </TH>  </TR>
+  <TR> <TD> Chlorophyll a (connected to biomass in lakes) </TD> <TD align="right">  11 </TD> </TR>
+  <TR> <TD> Physical/chemical characteristics: temperature </TD> <TD align="right">  11 </TD> </TR>
+  <TR> <TD> Physical/chemical characteristics: oxygen </TD> <TD align="right">  10 </TD> </TR>
+  <TR> <TD> Transparency (Secchi disk) </TD> <TD align="right">  10 </TD> </TR>
+  <TR> <TD> Physical/chemical characteristics: conductivity </TD> <TD align="right">   9 </TD> </TR>
+  <TR> <TD> Physical/chemical characteristics: pH </TD> <TD align="right">   9 </TD> </TR>
+  <TR> <TD> Basic climate at the site: monthly temperature and precipitation </TD> <TD align="right">   8 </TD> </TR>
+  <TR> <TD> Physical/chemical characteristics: nutrients (N, P) </TD> <TD align="right">   8 </TD> </TR>
+  <TR> <TD> Basic climate at the site: annual mean temperature </TD> <TD align="right">   6 </TD> </TR>
+  <TR> <TD> Basic climate at the site: annual precipitation </TD> <TD align="right">   6 </TD> </TR>
+  <TR> <TD> Primary producers diversity: phytoplankton (list, abundance, groups) </TD> <TD align="right">   6 </TD> </TR>
+  <TR> <TD> Secondary producers: zooplankton </TD> <TD align="right">   4 </TD> </TR>
+  <TR> <TD> Macrophytes (structural measurements, presence/absence, cover) </TD> <TD align="right">   3 </TD> </TR>
+  <TR> <TD> Radiation </TD> <TD align="right">   3 </TD> </TR>
+  <TR> <TD> Secondary producers: fish </TD> <TD align="right">   3 </TD> </TR>
+   </TABLE>
+
+
+
+---
+## Freshwater-river
+
+<!-- Map generated in R 3.0.1 by googleVis 0.4.3 package -->
+<!-- Sun Jun 16 20:54:07 2013 -->
+
+
+<!-- jsHeader -->
+<script type="text/javascript">
+ 
+// jsData 
+function gvisDataCountryAndDomainPlotFreshwater-river () {
+  var data = new google.visualization.DataTable();
+  var datajson =
+[
+ [
+ 50.15997,
+9.000495,
+"Rhine-Main-Observatory" 
+] 
+];
+data.addColumn('number','Latitude');
+data.addColumn('number','Longitude');
+data.addColumn('string','siteName');
+data.addRows(datajson);
+return(data);
+}
+ 
+// jsDrawChart
+function drawChartCountryAndDomainPlotFreshwater-river() {
+  var data = gvisDataCountryAndDomainPlotFreshwater-river();
+  var options = {};
+options["showTip"] = true;
+options["mapType"] = "terrain";
+options["useMapTypeControl"] = true;
+options["width"] =    800;
+options["height"] =    200;
+
+     var chart = new google.visualization.Map(
+       document.getElementById('CountryAndDomainPlotFreshwater-river')
+     );
+     chart.draw(data,options);
+    
+
+}
+  
+ 
+// jsDisplayChart
+(function() {
+  var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+  var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+  var chartid = "map";
+
+  // Manually see if chartid is in pkgs (not all browsers support Array.indexOf)
+  var i, newPackage = true;
+  for (i = 0; newPackage && i < pkgs.length; i++) {
+    if (pkgs[i] === chartid)
+      newPackage = false;
+  }
+  if (newPackage)
+    pkgs.push(chartid);
+
+  // Add the drawChart function to the global list of callbacks
+  callbacks.push(drawChartCountryAndDomainPlotFreshwater-river);
+})();
+function displayChartCountryAndDomainPlotFreshwater-river() {
+  var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+  var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+  window.clearTimeout(window.__gvisLoad);
+  // The timeout is set to 100 because otherwise the container div we are
+  // targeting might not be part of the document yet
+  window.__gvisLoad = setTimeout(function() {
+    var pkgCount = pkgs.length;
+    google.load("visualization", "1", { packages:pkgs, callback: function() {
+      if (pkgCount != pkgs.length) {
+        // Race condition where another setTimeout call snuck in after us; if
+        // that call added a package, we must not shift its callback
+        return;
+      }
+      while (callbacks.length > 0)
+        callbacks.shift()();
+    } });
+  }, 100);
+}
+ 
+// jsFooter
+ </script>
+ 
+<!-- jsChart -->  
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartCountryAndDomainPlotFreshwater-river"></script>
+ 
+<!-- divChart -->
+  
+<div id="CountryAndDomainPlotFreshwater-river"
+  style="width: 800px; height: 200px;">
+</div>
+<!-- html table generated in R 3.0.1 by xtable 1.7-1 package -->
+<!-- Sun Jun 16 20:54:07 2013 -->
+<TABLE >
+<TR> <TH> Parameter name </TH> <TH> Sites </TH>  </TR>
+  <TR> <TD> Basic climate at the site: monthly temperature and precipitation </TD> <TD align="right">   1 </TD> </TR>
+  <TR> <TD> Main hydrological parameters: gauge level </TD> <TD align="right">   1 </TD> </TR>
+  <TR> <TD> Main hydrological parameters: turbidity </TD> <TD align="right">   1 </TD> </TR>
+  <TR> <TD> Microhabitat diversity, coverage of microhabitats </TD> <TD align="right">   1 </TD> </TR>
+  <TR> <TD> Physical/chemical characteristics: temperature </TD> <TD align="right">   1 </TD> </TR>
+  <TR> <TD> Primary producers diversity: macrophytes (list, abundance) </TD> <TD align="right">   1 </TD> </TR>
+  <TR> <TD> Secondary producers: macroinvertebrates </TD> <TD align="right">   1 </TD> </TR>
+   </TABLE>
+
+
+
+---
+## Marine
+
+<!-- Map generated in R 3.0.1 by googleVis 0.4.3 package -->
+<!-- Sun Jun 16 20:54:07 2013 -->
+
+
+<!-- jsHeader -->
+<script type="text/javascript">
+ 
+// jsData 
+function gvisDataCountryAndDomainPlotMarine () {
+  var data = new google.visualization.DataTable();
+  var datajson =
+[
+ [
+ 54.43333,
+12.7,
+"Darss-Zingst Bodden" 
+],
+[
+ 54.43333,
+12.7,
+"Zingst" 
+],
+[
+ 45.30747,
+12.814541,
+"Gulf of Venice and Trieste" 
+],
+[
+ 45.695,
+13.705,
+"Gulf of Trieste" 
+],
+[
+ 44.44,
+12.52,
+"Po Delta and Romagna Coast" 
+],
+[
+ 40.78386,
+14.070619,
+"LTER Marechiara" 
+],
+[
+ 45.33702,
+12.274708,
+"Lagoon of Venice" 
+],
+[
+ 42.41707,
+27.695955,
+"Sozopol" 
+] 
+];
+data.addColumn('number','Latitude');
+data.addColumn('number','Longitude');
+data.addColumn('string','siteName');
+data.addRows(datajson);
+return(data);
+}
+ 
+// jsDrawChart
+function drawChartCountryAndDomainPlotMarine() {
+  var data = gvisDataCountryAndDomainPlotMarine();
+  var options = {};
+options["showTip"] = true;
+options["mapType"] = "terrain";
+options["useMapTypeControl"] = true;
+options["width"] =    800;
+options["height"] =    200;
+
+     var chart = new google.visualization.Map(
+       document.getElementById('CountryAndDomainPlotMarine')
+     );
+     chart.draw(data,options);
+    
+
+}
+  
+ 
+// jsDisplayChart
+(function() {
+  var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+  var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+  var chartid = "map";
+
+  // Manually see if chartid is in pkgs (not all browsers support Array.indexOf)
+  var i, newPackage = true;
+  for (i = 0; newPackage && i < pkgs.length; i++) {
+    if (pkgs[i] === chartid)
+      newPackage = false;
+  }
+  if (newPackage)
+    pkgs.push(chartid);
+
+  // Add the drawChart function to the global list of callbacks
+  callbacks.push(drawChartCountryAndDomainPlotMarine);
+})();
+function displayChartCountryAndDomainPlotMarine() {
+  var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+  var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+  window.clearTimeout(window.__gvisLoad);
+  // The timeout is set to 100 because otherwise the container div we are
+  // targeting might not be part of the document yet
+  window.__gvisLoad = setTimeout(function() {
+    var pkgCount = pkgs.length;
+    google.load("visualization", "1", { packages:pkgs, callback: function() {
+      if (pkgCount != pkgs.length) {
+        // Race condition where another setTimeout call snuck in after us; if
+        // that call added a package, we must not shift its callback
+        return;
+      }
+      while (callbacks.length > 0)
+        callbacks.shift()();
+    } });
+  }, 100);
+}
+ 
+// jsFooter
+ </script>
+ 
+<!-- jsChart -->  
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartCountryAndDomainPlotMarine"></script>
+ 
+<!-- divChart -->
+  
+<div id="CountryAndDomainPlotMarine"
+  style="width: 800px; height: 200px;">
+</div>
+<!-- html table generated in R 3.0.1 by xtable 1.7-1 package -->
+<!-- Sun Jun 16 20:54:07 2013 -->
+<TABLE >
+<TR> <TH> Parameter name </TH> <TH> Sites </TH>  </TR>
+  <TR> <TD> Chlorophyll a (connected to biomass of phytoplankton) </TD> <TD align="right">   8 </TD> </TR>
+  <TR> <TD> Physical/chemical characteristics: salinity </TD> <TD align="right">   8 </TD> </TR>
+  <TR> <TD> Physical/chemical characteristics: temperature </TD> <TD align="right">   8 </TD> </TR>
+  <TR> <TD> Physical/chemical characteristics: oxygen </TD> <TD align="right">   7 </TD> </TR>
+  <TR> <TD> Physical/chemical characteristics: transparency (Secchi disk) </TD> <TD align="right">   7 </TD> </TR>
+  <TR> <TD> Input of major macronutrients (N, P, Si) </TD> <TD align="right">   5 </TD> </TR>
+  <TR> <TD> Physical/chemical characteristics: pH </TD> <TD align="right">   5 </TD> </TR>
+  <TR> <TD> Primary producers diversity: phytoplankton (list, abundance, groups) </TD> <TD align="right">   3 </TD> </TR>
+  <TR> <TD> Basic climate at the site: monthly mean temperatures </TD> <TD align="right">   2 </TD> </TR>
+  <TR> <TD> Physical/chemical characteristics: light quantity-quality (euphotic depth) </TD> <TD align="right">   2 </TD> </TR>
+  <TR> <TD> Secondary producers: zooplankton </TD> <TD align="right">   2 </TD> </TR>
+  <TR> <TD> Basic climate at the site: monthly mean relative humidity </TD> <TD align="right">   1 </TD> </TR>
+  <TR> <TD> Biomass of consumers </TD> <TD align="right">   1 </TD> </TR>
+  <TR> <TD> Secondary producers: fish </TD> <TD align="right">   1 </TD> </TR>
+  <TR> <TD> Total irradiance </TD> <TD align="right">   1 </TD> </TR>
+   </TABLE>
+
 
 
 ---
