@@ -36,7 +36,7 @@ db.sqlite.cfg  <- list(
   , driver =  dbDriver("SQLite")
   , query  = list("getAvailableDataByCountry")
   , queryTitle = list("Uploaded Data")
-  , countryNames = c("Poland", "Bulgaria")
+  , countryNames = c("Austria", "Bulgaria", "Finland", "Germany", "Hungary", "Italy", "Lithuania", "Poland", "Romania", "Spain", "Sweden")
 )
 
 dbConnection <- with(db.sqlite.cfg, dbConnect(driver, dbname = fName))
@@ -85,21 +85,39 @@ sqlQueryToDataTable <- function(countryName, sqlQuery = db.sqlite.cfg$query) {
     , key = c("siteLTERCode", "siteName", "domainName")
   )
 }
-
+# Get Country data
 countryRawData_l <- lapply(db.sqlite.cfg$countryNames, sqlQueryToDataTable)
-#countryRawData_l
 # Convert Lat and Long coordinates in Lat:Long
 countryRawData_l <- lapply(
   countryRawData_l
   , function(country_dt) country_dt[, latLong := paste(siteLat, siteLong, sep = ":")]
   )
 
-countryAggrData_l <- countryRawData_l
-countryAggrData_l <- lapply(
-  countryAggrData_l
-  , function(country_df) { tmp_df <- ddply(country_df, .(parameterName), summarize, Count = length(parameterName)); colnames(tmp_df) <- c("Parameter Name", "Count"); tmp_df}
-  )
+aggregatreByParameter <- function(country_df) {
+  if (nrow(country_df) > 0) {
+    tmp_df <- ddply(
+      country_df
+      , .(parameterName)
+      , summarize
+      , Count = length(parameterName)
+      )
+  } else {
+    tmp_df <- data.frame(parameterName = "None", Count = "N/A")
+  }
+  colnames(tmp_df) <- c("Parameter name", "Sites")
+  tmp_df
+}
 
+# Aggregate per parameter name
+countryAggrData_l <- countryRawData_l
+countryAggrData_l <- lapply(countryAggrData_l, aggregatreByParameter)
+```
+
+
+---
+## Austria
+
+```{r "Austria", echo=FALSE, cache=FALSE, results='asis', warning=FALSE}
 tmp_dt <- unique(countryRawData_l[[1]])
 plot(
   gvisMap(
@@ -112,13 +130,13 @@ plot(
       , width = 800
       , height = 200
       )
-    , chartid = "CountryPlotPoland"
+    , chartid = "CountryPlotAustria"
     )
   )
-
+tmp_df <- countryAggrData_l[[1]]
 print(
   xtable(
-    head(countryAggrData_l[[1]][with(countryAggrData_l[[1]], order(-Count)), ], 10))
+    head(tmp_df[with(tmp_df, order(-Sites)), ], 15))
   , type = 'html'
   , html.table.attributes = ''
   , include.rownames = FALSE
@@ -127,18 +145,33 @@ print(
 
 
 ---
-## Austria
-
-* Mappa siti
-* Stat per singolo sito
-
-
----
 ## Bulgaria
 
-
-
-
+```{r "Bulgaria", echo=FALSE, cache=FALSE, results='asis', warning=FALSE}
+tmp_dt <- unique(countryRawData_l[[2]])
+plot(
+  gvisMap(
+    tmp_dt
+    , locationvar = "latLong"
+    , tipvar      = "siteName"
+    , options     = list(
+      mapType     = 'terrain'
+      , useMapTypeControl = TRUE
+      , width = 800
+      , height = 200
+      )
+    , chartid = "CountryPlotBulgaria"
+    )
+  )
+tmp_df <- countryAggrData_l[[2]]
+print(
+  xtable(
+    head(tmp_df[with(tmp_df, order(-Sites)), ], 15))
+  , type = 'html'
+  , html.table.attributes = ''
+  , include.rownames = FALSE
+  )
+```
 
 
 
@@ -146,6 +179,31 @@ print(
 ---
 ## Finland
 
+```{r "Finland", echo=FALSE, cache=FALSE, results='asis', warning=FALSE}
+tmp_dt <- unique(countryRawData_l[[3]])
+plot(
+  gvisMap(
+    tmp_dt
+    , locationvar = "latLong"
+    , tipvar      = "siteName"
+    , options     = list(
+      mapType     = 'terrain'
+      , useMapTypeControl = TRUE
+      , width = 800
+      , height = 200
+      )
+    , chartid = "CountryPlotFinland"
+    )
+  )
+tmp_df <- countryAggrData_l[[3]]
+print(
+  xtable(
+    head(tmp_df[with(tmp_df, order(-Sites)), ], 15))
+  , type = 'html'
+  , html.table.attributes = ''
+  , include.rownames = FALSE
+  )
+```
 
 
 ---
@@ -156,6 +214,9 @@ print(
 ---
 ## Hungary
 
+
+---
+## Italy
 
 
 ---

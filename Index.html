@@ -19,6 +19,7 @@
   </script>
   
     <link rel="stylesheet" href = "assets/css/ribbons.css">
+<link rel="stylesheet" href = "assets/css/table.css">
 
 </head>
 <body style="opacity: 0">
@@ -105,73 +106,33 @@ Google Drive</li>
     <h2>Statistiche per Nazione</h2>
   </hgroup>
   <article>
+    
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="" id="slide-6" style="background:;">
+  <hgroup>
+    <h2>Austria</h2>
+  </hgroup>
+  <article>
     <!-- Map generated in R 3.0.1 by googleVis 0.4.3 package -->
 
-<!-- Sun Jun 16 17:59:39 2013 -->
+<!-- Sun Jun 16 18:32:41 2013 -->
 
 <!-- jsHeader -->
 
 <script type="text/javascript">
  
 // jsData 
-function gvisDataCountryPlotPoland () {
+function gvisDataCountryPlotAustria () {
   var data = new google.visualization.DataTable();
   var datajson =
 [
  [
- 49.19159399,
-20.07261086,
-"Czarny Staw" 
-],
-[
- 49.19159399,
-20.07261086,
-"Morskie Oko" 
-],
-[
- 52.2983,
-20.808964,
-"Kampinos" 
-],
-[
- 49.66861,
-18.943611,
-"Brenna" 
-],
-[
- 52.75,
-23.866667,
-"Primaeval Bialowieza Forest" 
-],
-[
- 54.695575,
-17.46695,
-"Slowinski National Park" 
-],
-[
- 49.19667,
-19.890833,
-"Tatrzański National Park" 
-],
-[
- 51.43333,
-19.916667,
-"Sulejowski Reservoir" 
-],
-[
- 51.50833,
-22.415,
-"West Polesie Biosphere Reserve" 
-],
-[
- 51.50833,
-22.415,
-"West Polesie Biosphere Reserve" 
-],
-[
- 53.77094,
-21.603756,
-"Mikołajskie" 
+ 47.56667,
+11.63333,
+"Achenkirch-Mühlegger Köpfl" 
 ] 
 ];
 data.addColumn('number','Latitude');
@@ -182,8 +143,8 @@ return(data);
 }
  
 // jsDrawChart
-function drawChartCountryPlotPoland() {
-  var data = gvisDataCountryPlotPoland();
+function drawChartCountryPlotAustria() {
+  var data = gvisDataCountryPlotAustria();
   var options = {};
 options["showTip"] = true;
 options["mapType"] = "terrain";
@@ -192,7 +153,7 @@ options["width"] =    800;
 options["height"] =    200;
 
      var chart = new google.visualization.Map(
-       document.getElementById('CountryPlotPoland')
+       document.getElementById('CountryPlotAustria')
      );
      chart.draw(data,options);
     
@@ -216,9 +177,9 @@ options["height"] =    200;
     pkgs.push(chartid);
 
   // Add the drawChart function to the global list of callbacks
-  callbacks.push(drawChartCountryPlotPoland);
+  callbacks.push(drawChartCountryPlotAustria);
 })();
-function displayChartCountryPlotPoland() {
+function displayChartCountryPlotAustria() {
   var pkgs = window.__gvisPackages = window.__gvisPackages || [];
   var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
   window.clearTimeout(window.__gvisLoad);
@@ -244,46 +205,24 @@ function displayChartCountryPlotPoland() {
 
 <!-- jsChart -->  
 
-<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartCountryPlotPoland"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartCountryPlotAustria"></script>
  
 
 <!-- divChart -->
 
-<div id="CountryPlotPoland"
+<div id="CountryPlotAustria"
   style="width: 800px; height: 200px;">
 </div>
 
 <!-- html table generated in R 3.0.1 by xtable 1.7-1 package -->
 
-<!-- Sun Jun 16 17:59:39 2013 -->
+<!-- Sun Jun 16 18:32:41 2013 -->
 
 <TABLE >
-<TR> <TH> Parameter Name </TH> <TH> Count </TH>  </TR>
-  <TR> <TD> Annual mean temperature and precipitation (snow where relevant) </TD> <TD align="right">   4 </TD> </TR>
-  <TR> <TD> Secondary producers: zooplankton </TD> <TD align="right">   4 </TD> </TR>
-  <TR> <TD> Atmospheric deposition of main nutrients/pollutants </TD> <TD align="right">   3 </TD> </TR>
-  <TR> <TD> Chemistry of precipitation and snow </TD> <TD align="right">   3 </TD> </TR>
-  <TR> <TD> Chlorophyll a (connected to biomass in lakes) </TD> <TD align="right">   3 </TD> </TR>
-  <TR> <TD> Cover of CORINE/EUNIS land uses and habitats </TD> <TD align="right">   3 </TD> </TR>
-  <TR> <TD> History of growth by tree ring widths </TD> <TD align="right">   3 </TD> </TR>
-  <TR> <TD> Monthly precipitation and mean temperature (min, max mean temperature) </TD> <TD align="right">   3 </TD> </TR>
-  <TR> <TD> Physical/chemical characteristics: oxygen </TD> <TD align="right">   3 </TD> </TR>
-  <TR> <TD> Physical/chemical characteristics: temperature </TD> <TD align="right">   3 </TD> </TR>
+<TR> <TH> Parameter name </TH> <TH> Sites </TH>  </TR>
+  <TR> <TD> Annual mean temperature and precipitation (snow where relevant) </TD> <TD align="right">   1 </TD> </TR>
+  <TR> <TD> Soil water content </TD> <TD align="right">   1 </TD> </TR>
    </TABLE>
-
-  </article>
-  <!-- Presenter Notes -->
-</slide>
-
-      <slide class="" id="slide-6" style="background:;">
-  <hgroup>
-    <h2>Austria</h2>
-  </hgroup>
-  <article>
-    <ul>
-<li>Mappa siti</li>
-<li>Stat per singolo sito</li>
-</ul>
 
   </article>
   <!-- Presenter Notes -->
@@ -294,7 +233,128 @@ function displayChartCountryPlotPoland() {
     <h2>Bulgaria</h2>
   </hgroup>
   <article>
+    <!-- Map generated in R 3.0.1 by googleVis 0.4.3 package -->
+
+<!-- Sun Jun 16 18:32:41 2013 -->
+
+<!-- jsHeader -->
+
+<script type="text/javascript">
+ 
+// jsData 
+function gvisDataCountryPlotBulgaria () {
+  var data = new google.visualization.DataTable();
+  var datajson =
+[
+ [
+ 44.1,
+27.07,
+"Srebarna" 
+],
+[
+ 42.41707,
+27.695955,
+"Sozopol" 
+] 
+];
+data.addColumn('number','Latitude');
+data.addColumn('number','Longitude');
+data.addColumn('string','siteName');
+data.addRows(datajson);
+return(data);
+}
+ 
+// jsDrawChart
+function drawChartCountryPlotBulgaria() {
+  var data = gvisDataCountryPlotBulgaria();
+  var options = {};
+options["showTip"] = true;
+options["mapType"] = "terrain";
+options["useMapTypeControl"] = true;
+options["width"] =    800;
+options["height"] =    200;
+
+     var chart = new google.visualization.Map(
+       document.getElementById('CountryPlotBulgaria')
+     );
+     chart.draw(data,options);
     
+
+}
+  
+ 
+// jsDisplayChart
+(function() {
+  var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+  var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+  var chartid = "map";
+
+  // Manually see if chartid is in pkgs (not all browsers support Array.indexOf)
+  var i, newPackage = true;
+  for (i = 0; newPackage && i < pkgs.length; i++) {
+    if (pkgs[i] === chartid)
+      newPackage = false;
+  }
+  if (newPackage)
+    pkgs.push(chartid);
+
+  // Add the drawChart function to the global list of callbacks
+  callbacks.push(drawChartCountryPlotBulgaria);
+})();
+function displayChartCountryPlotBulgaria() {
+  var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+  var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+  window.clearTimeout(window.__gvisLoad);
+  // The timeout is set to 100 because otherwise the container div we are
+  // targeting might not be part of the document yet
+  window.__gvisLoad = setTimeout(function() {
+    var pkgCount = pkgs.length;
+    google.load("visualization", "1", { packages:pkgs, callback: function() {
+      if (pkgCount != pkgs.length) {
+        // Race condition where another setTimeout call snuck in after us; if
+        // that call added a package, we must not shift its callback
+        return;
+      }
+      while (callbacks.length > 0)
+        callbacks.shift()();
+    } });
+  }, 100);
+}
+ 
+// jsFooter
+ </script>
+ 
+
+<!-- jsChart -->  
+
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartCountryPlotBulgaria"></script>
+ 
+
+<!-- divChart -->
+
+<div id="CountryPlotBulgaria"
+  style="width: 800px; height: 200px;">
+</div>
+
+<!-- html table generated in R 3.0.1 by xtable 1.7-1 package -->
+
+<!-- Sun Jun 16 18:32:41 2013 -->
+
+<TABLE >
+<TR> <TH> Parameter name </TH> <TH> Sites </TH>  </TR>
+  <TR> <TD> Physical/chemical characteristics: temperature </TD> <TD align="right">   2 </TD> </TR>
+  <TR> <TD> Chlorophyll a (connected to biomass in lakes) </TD> <TD align="right">   1 </TD> </TR>
+  <TR> <TD> Chlorophyll a (connected to biomass of phytoplankton) </TD> <TD align="right">   1 </TD> </TR>
+  <TR> <TD> Physical/chemical characteristics: conductivity </TD> <TD align="right">   1 </TD> </TR>
+  <TR> <TD> Physical/chemical characteristics: nutrients (N, P) </TD> <TD align="right">   1 </TD> </TR>
+  <TR> <TD> Physical/chemical characteristics: oxygen </TD> <TD align="right">   1 </TD> </TR>
+  <TR> <TD> Physical/chemical characteristics: pH </TD> <TD align="right">   1 </TD> </TR>
+  <TR> <TD> Physical/chemical characteristics: salinity </TD> <TD align="right">   1 </TD> </TR>
+  <TR> <TD> Physical/chemical characteristics: transparency (Secchi disk) </TD> <TD align="right">   1 </TD> </TR>
+  <TR> <TD> Transparency (Secchi disk) </TD> <TD align="right">   1 </TD> </TR>
+  <TR> <TD> Water depth </TD> <TD align="right">   1 </TD> </TR>
+   </TABLE>
+
   </article>
   <!-- Presenter Notes -->
 </slide>
@@ -304,7 +364,111 @@ function displayChartCountryPlotPoland() {
     <h2>Finland</h2>
   </hgroup>
   <article>
+    <!-- Map generated in R 3.0.1 by googleVis 0.4.3 package -->
+
+<!-- Sun Jun 16 18:32:41 2013 -->
+
+<!-- jsHeader -->
+
+<script type="text/javascript">
+ 
+// jsData 
+function gvisDataCountryPlotFinland () {
+  var data = new google.visualization.DataTable();
+  var datajson =
+[
+ [
+ null,
+null 
+] 
+];
+data.addColumn('string','latLong');
+data.addColumn('string','siteName');
+data.addRows(datajson);
+return(data);
+}
+ 
+// jsDrawChart
+function drawChartCountryPlotFinland() {
+  var data = gvisDataCountryPlotFinland();
+  var options = {};
+options["showTip"] = true;
+options["mapType"] = "terrain";
+options["useMapTypeControl"] = true;
+options["width"] =    800;
+options["height"] =    200;
+
+     var chart = new google.visualization.Map(
+       document.getElementById('CountryPlotFinland')
+     );
+     chart.draw(data,options);
     
+
+}
+  
+ 
+// jsDisplayChart
+(function() {
+  var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+  var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+  var chartid = "map";
+
+  // Manually see if chartid is in pkgs (not all browsers support Array.indexOf)
+  var i, newPackage = true;
+  for (i = 0; newPackage && i < pkgs.length; i++) {
+    if (pkgs[i] === chartid)
+      newPackage = false;
+  }
+  if (newPackage)
+    pkgs.push(chartid);
+
+  // Add the drawChart function to the global list of callbacks
+  callbacks.push(drawChartCountryPlotFinland);
+})();
+function displayChartCountryPlotFinland() {
+  var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+  var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+  window.clearTimeout(window.__gvisLoad);
+  // The timeout is set to 100 because otherwise the container div we are
+  // targeting might not be part of the document yet
+  window.__gvisLoad = setTimeout(function() {
+    var pkgCount = pkgs.length;
+    google.load("visualization", "1", { packages:pkgs, callback: function() {
+      if (pkgCount != pkgs.length) {
+        // Race condition where another setTimeout call snuck in after us; if
+        // that call added a package, we must not shift its callback
+        return;
+      }
+      while (callbacks.length > 0)
+        callbacks.shift()();
+    } });
+  }, 100);
+}
+ 
+// jsFooter
+ </script>
+ 
+
+<!-- jsChart -->  
+
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartCountryPlotFinland"></script>
+ 
+
+<!-- divChart -->
+
+<div id="CountryPlotFinland"
+  style="width: 800px; height: 200px;">
+</div>
+
+<!-- html table generated in R 3.0.1 by xtable 1.7-1 package -->
+
+<!-- Sun Jun 16 18:32:41 2013 -->
+
+<TABLE >
+<TR> <TH> Parameter name </TH> <TH> Sites </TH>  </TR>
+  <TR> <TD> None </TD> <TD> N/A </TD> </TR>
+   </TABLE>
+
   </article>
   <!-- Presenter Notes -->
 </slide>
@@ -331,7 +495,7 @@ function displayChartCountryPlotPoland() {
 
       <slide class="" id="slide-11" style="background:;">
   <hgroup>
-    <h2>Lithuania</h2>
+    <h2>Italy</h2>
   </hgroup>
   <article>
     
@@ -341,7 +505,7 @@ function displayChartCountryPlotPoland() {
 
       <slide class="" id="slide-12" style="background:;">
   <hgroup>
-    <h2>Poland</h2>
+    <h2>Lithuania</h2>
   </hgroup>
   <article>
     
@@ -351,7 +515,7 @@ function displayChartCountryPlotPoland() {
 
       <slide class="" id="slide-13" style="background:;">
   <hgroup>
-    <h2>Romania</h2>
+    <h2>Poland</h2>
   </hgroup>
   <article>
     
@@ -361,7 +525,7 @@ function displayChartCountryPlotPoland() {
 
       <slide class="" id="slide-14" style="background:;">
   <hgroup>
-    <h2>Spain</h2>
+    <h2>Romania</h2>
   </hgroup>
   <article>
     
@@ -371,7 +535,7 @@ function displayChartCountryPlotPoland() {
 
       <slide class="" id="slide-15" style="background:;">
   <hgroup>
-    <h2>Sweden</h2>
+    <h2>Spain</h2>
   </hgroup>
   <article>
     
@@ -381,7 +545,7 @@ function displayChartCountryPlotPoland() {
 
       <slide class="" id="slide-16" style="background:;">
   <hgroup>
-    <h2>Stat aggregate oer dominio</h2>
+    <h2>Sweden</h2>
   </hgroup>
   <article>
     
@@ -391,7 +555,7 @@ function displayChartCountryPlotPoland() {
 
       <slide class="" id="slide-17" style="background:;">
   <hgroup>
-    <h2>I parametri più misurati per dominio</h2>
+    <h2>Stat aggregate oer dominio</h2>
   </hgroup>
   <article>
     
@@ -400,6 +564,16 @@ function displayChartCountryPlotPoland() {
 </slide>
 
       <slide class="" id="slide-18" style="background:;">
+  <hgroup>
+    <h2>I parametri più misurati per dominio</h2>
+  </hgroup>
+  <article>
+    
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="" id="slide-19" style="background:;">
   <hgroup>
     <h2>Kick off discussion</h2>
   </hgroup>

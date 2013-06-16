@@ -1,0 +1,26 @@
+table {
+  border: none;
+  width: 100%;
+  border-collapse: collapse;
+  line-height: 20px;
+  font-family: 'Trebuchet MS';
+  color: rgb(102, 102, 102);
+}
+table thead {
+  border-top: 1px solid #BFBEAD;
+  border-bottom: 1px solid #BFBEAD;
+}
+table th, table td, table caption {
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  vertical-align: top;
+}
+table th {
+  background: #CFCEBD;
+  color: #575400;
+  text-transform: none;
+}
+table td {
+  border-bottom: 1px solid #CFCEBD;
+}
