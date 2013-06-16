@@ -75,7 +75,7 @@ dbConnection <- with(db.sqlite.cfg, dbConnect(driver, dbname = fName))
 ## Statistiche per Nazione
 
 ```{r "countryRawDataQuery", echo=FALSE, cache=FALSE, results='asis'}
-
+assignInNamespace("cedta.override","googleVis","data.table") 
 sqlQueryToDataTable <- function(countryName, sqlQuery = db.sqlite.cfg$query) {
   data.table(
     execQuery(sqlQuery, connection = dbConnection, countryName = countryName)
@@ -102,7 +102,7 @@ plot(
       mapType     = 'terrain'
       , useMapTypeControl = TRUE
       , width = 1000
-      , height = 400
+      , height = 300
       )
     , chartid = "A5Plot"
     )
