@@ -17,6 +17,7 @@ library(data.table)
 library(RSQLite)
 library(sqlutils)
 suppressPackageStartupMessages(library(googleVis))
+options(gvis.plot.tag='chart')
 ```
 
 
@@ -102,7 +103,6 @@ plot(
       , height = 400
       )
     , chartid = "A5Plot"
-    , tag = 'chart'
     )
   )
 
