@@ -16,7 +16,10 @@ github:
 library(data.table)
 library(RSQLite)
 library(sqlutils)
+library(plyr)
+library(xtable)
 suppressPackageStartupMessages(library(googleVis))
+
 options(gvis.plot.tag='chart')
 assignInNamespace("cedta.override","slidify","data.table") 
 ```
@@ -75,7 +78,7 @@ dbConnection <- with(db.sqlite.cfg, dbConnect(driver, dbname = fName))
 ---
 ## Statistiche per Nazione
 
-```{r "countryRawDataQuery", echo=FALSE, cache=FALSE, results='asis'}
+```{r "countryRawDataQuery", echo=FALSE, cache=FALSE, results='asis', warning=FALSE}
 sqlQueryToDataTable <- function(countryName, sqlQuery = db.sqlite.cfg$query) {
   data.table(
     execQuery(sqlQuery, connection = dbConnection, countryName = countryName)
@@ -91,6 +94,11 @@ countryRawData_l <- lapply(
   , function(country_dt) country_dt[, latLong := paste(siteLat, siteLong, sep = ":")]
   )
 
+countryAggrData_l <- countryRawData_l
+countryAggrData_l <- lapply(
+  countryAggrData_l
+  , function(country_df) ddply(country_df, .(parameterName), summarize, count = length(parameterName))
+  )
 
 tmp_dt <- unique(countryRawData_l[[1]])
 plot(
@@ -101,14 +109,21 @@ plot(
     , options     = list(
       mapType     = 'terrain'
       , useMapTypeControl = TRUE
-      , width = 1000
-      , height = 300
+      , width = 800
+      , height = 200
       )
-    , chartid = "A5Plot"
+    , chartid = "CountryPlotPoland"
     )
   )
 
+print(
+  xtable(
+    head(countryAggrData_l[[1]][with(countryAggrData_l[[1]], order(-count)), ], 10))
+  , type = 'html'
+  , html.table.attributes = ''
+  )
 ```
+
 
 ---
 ## Austria
