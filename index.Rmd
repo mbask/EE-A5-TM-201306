@@ -102,6 +102,7 @@ plot(
       , height = 400
       )
     , chartid = "A5Plot"
+    , tag = 'chart'
     )
   )
 
