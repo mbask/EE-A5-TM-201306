@@ -75,31 +75,33 @@ dbConnection <- with(db.sqlite.cfg, dbConnect(driver, dbname = fName))
 ## Statistiche per Nazione
 
 ```{r "countryRawDataQuery", echo=FALSE, cache=FALSE, results='asis'}
-countryRawData_l <- lapply(
-  db.sqlite.cfg$countryNames
-  , function(cName) execQuery(db.sqlite.cfg$query[1], connection = dbConnection, countryName = cName)
-  )
 
+sqlQueryToDataTable <- function(countryName, sqlQuery = db.sqlite.cfg$query) {
+  data.table(
+    execQuery(sqlQuery, connection = dbConnection, countryName = countryName)
+    , key = c("siteLTERCode", "siteName", "domainName")
+  )
+}
+
+countryRawData_l <- lapply(db.sqlite.cfg$countryNames, sqlQueryToDataTable)
+#countryRawData_l
 # Convert Lat and Long coordinates in Lat:Long
 countryRawData_l <- lapply(
   countryRawData_l
-  , function(country_df) within(country_df, {latLong <- paste(siteLat, siteLong, sep = ":")})
+  , function(country_dt) country_dt[, latLong := paste(siteLat, siteLong, sep = ":")]
   )
 
-countryRawData_l[[1]] <- data.table(
-  countryRawData_l[[1]]
-  , key = c("siteLTERCode", "siteName", "domainName")
-  )
 
+tmp_dt <- unique(countryRawData_l[[1]])
 plot(
   gvisMap(
-    unique(countryRawData_l[[1]])
+    tmp_dt
     , locationvar = "latLong"
     , tipvar      = "siteName"
     , options     = list(
-      mapType     = 'satellite'
+      mapType     = 'terrain'
       , useMapTypeControl = TRUE
-      , width = 600
+      , width = 1000
       , height = 400
       )
     , chartid = "A5Plot"
