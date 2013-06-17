@@ -25,7 +25,7 @@ assignInNamespace("cedta.override","slidify","data.table")
 ```
 
 
-```{r "functions", cache=FALSE, include=FALSE, echo=FALSE}
+```{r "functions", cache=TRUE, include=FALSE, echo=FALSE}
 countryPlot <- function(country_df, id) {
   plot(
     gvisMap(
@@ -35,7 +35,7 @@ countryPlot <- function(country_df, id) {
       , options     = list(
         mapType     = 'terrain'
         , useMapTypeControl = TRUE
-        , width     = 800
+        , width     = 1000
         , height    = 200
         )
       , chartid = paste0("CountryAndDomainPlot", sub("-", "", id))
