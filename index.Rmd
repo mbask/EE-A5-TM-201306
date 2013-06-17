@@ -19,13 +19,13 @@ library(sqlutils)
 library(plyr)
 library(xtable)
 suppressPackageStartupMessages(library(googleVis))
-
 options(gvis.plot.tag='chart')
+
 assignInNamespace("cedta.override","slidify","data.table") 
 ```
 
 
-```{r "functions", cache=TRUE, include=FALSE, echo=FALSE}
+```{r "functions", cache=FALSE, include=FALSE, echo=FALSE}
 countryPlot <- function(country_df, id) {
   plot(
     gvisMap(
@@ -35,17 +35,17 @@ countryPlot <- function(country_df, id) {
       , options     = list(
         mapType     = 'terrain'
         , useMapTypeControl = TRUE
-        , width = 800
-        , height = 200
+        , width     = 800
+        , height    = 200
         )
-      , chartid = paste0("CountryAndDomainPlot", id)
+      , chartid = paste0("CountryAndDomainPlot", sub("-", "", id))
       )
     )
   }
 printAggrData <- function(country_df) {
   print(
     xtable(
-      head(country_df[with(country_df, order(-Sites)), ], 15))
+      head(country_df[with(country_df, order(-Sites)), ], 20))
       , type = 'html'
       , html.table.attributes = ''
       , include.rownames = FALSE
