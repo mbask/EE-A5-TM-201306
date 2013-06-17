@@ -12,6 +12,7 @@ github:
   user: mbask
   repo: EE-A5-TM-201306
 ---
+
 ```{r "libraryLoad", cache=FALSE, include=FALSE, echo=FALSE}
 library(data.table)
 library(RSQLite)
@@ -35,7 +36,7 @@ countryPlot <- function(country_df, id) {
       , options     = list(
         mapType     = 'terrain'
         , useMapTypeControl = TRUE
-        , width     = 1000
+        , width     = 970
         , height    = 200
         )
       , chartid = paste0("CountryAndDomainPlot", sub("-", "", id))
@@ -86,40 +87,46 @@ dbConnection <- with(db.sqlite.cfg, dbConnect(driver, dbname = fName))
 
 ```
 
-## Statistiche generali
+## Introduction
 
-1. Edit YAML front matter
-2. Write using R Markdown
-3. Use an empty line followed by three dashes to separate slides!
+* A5 represents the experimental phase of the project, based on the sampling in the field of the new and pre‐existing parameters and indicators at different level/scales of investigation, at EnvEurope sites, with specific monitoring intensities and with methods adjusted to the respective intensity of survey.
 
----
-## Andamento della sottomissione
-
-
+* During 2012 each site was asked for the list of parameters they would deliver
 
 ---
-## Problemi incontrati nella sottomissione
+## Submission timeline
 
-* FTP
-* DEIMS
-* Data tool
-* Google Drive
+* Only nearly 45% of expected parameter datasets has been submitted so far...
+
+* ...and submission window has ended well over 3 months ago!
+
+![Data submission timeline](assets/img/timeLineChart.png)
 
 
 
 ---
-## Proposte di soluzioni
+## Relevant issues brought up
 
-* FTP
-* DEIMS
-* Data tool
-*publish("mbask", "EE-A5-TM-201306")
- Google Drive
+* **DEIMS** has undergone quite a few undocumented changes since its first deployment that resulted in some confusion
+
+* **Data tool** although set up to mimick ICP format, it is perceived as a daunting task
+
+* **FTP archive** someone has experienced login problems. It's definetly not the way to go for file sharing
+
+* **Google Drive sheets** perceived as "a waste of time"
 
 
 
 ---
-## Statistiche per Nazione
+## What can be done
+
+* Integrated upload and metadata processes
+
+* Let the system keep track of the link between the dataset and its metadata set
+
+
+---
+## Available parameters: Austria
 
 ```{r "countryRawDataQuery", echo=FALSE, cache=FALSE}
 sqlQueryToDataTable <- function(countryName, sqlQuery = db.sqlite.cfg$query[[1]]) {
@@ -141,10 +148,6 @@ countryAggrData_l <- countryRawData_l
 countryAggrData_l <- lapply(countryAggrData_l, aggregatreByParameter)
 ```
 
-
----
-## Austria
-
 ```{r "Austria", echo=FALSE, cache=FALSE, results='asis', warning=FALSE}
 tmpCountry <- 1
 countryPlot(unique(countryRawData_l[[tmpCountry]]), db.sqlite.cfg$countryNames[tmpCountry])
@@ -152,8 +155,9 @@ printAggrData(countryAggrData_l[[tmpCountry]])
 ```
 
 
+
 ---
-## Bulgaria
+## Available parameters: Bulgaria
 
 ```{r "Bulgaria", echo=FALSE, cache=FALSE, results='asis', warning=FALSE}
 tmpCountry <- 2
@@ -163,9 +167,8 @@ printAggrData(countryAggrData_l[[tmpCountry]])
 
 
 
-
 ---
-## Finland
+## Available parameters: Finland
 
 ```{r "Finland", echo=FALSE, cache=FALSE, results='asis', warning=FALSE}
 tmpCountry <- 3
@@ -174,8 +177,9 @@ printAggrData(countryAggrData_l[[tmpCountry]])
 ```
 
 
+
 ---
-## Germany
+## Available parameters: Germany
 
 ```{r "Germany", echo=FALSE, cache=FALSE, results='asis', warning=FALSE}
 tmpCountry <- 4
@@ -186,7 +190,7 @@ printAggrData(countryAggrData_l[[tmpCountry]])
 
 
 ---
-## Hungary
+## Available parameters: Hungary
 
 ```{r "Hungary", echo=FALSE, cache=FALSE, results='asis', warning=FALSE}
 tmpCountry <- 5
@@ -197,7 +201,7 @@ printAggrData(countryAggrData_l[[tmpCountry]])
 
 
 ---
-## Italy
+## Available parameters: Italy
 
 ```{r "Italy", echo=FALSE, cache=FALSE, results='asis', warning=FALSE}
 tmpCountry <- 6
@@ -208,7 +212,7 @@ printAggrData(countryAggrData_l[[tmpCountry]])
 
 
 ---
-## Lithuania
+## Available parameters: Lithuania
 
 ```{r "Lithuania", echo=FALSE, cache=FALSE, results='asis', warning=FALSE}
 tmpCountry <- 7
@@ -217,8 +221,9 @@ printAggrData(countryAggrData_l[[tmpCountry]])
 ```
 
 
+
 ---
-## Poland
+## Available parameters: Poland
 
 ```{r "Poland", echo=FALSE, cache=FALSE, results='asis', warning=FALSE}
 tmpCountry <- 8
@@ -227,8 +232,9 @@ printAggrData(countryAggrData_l[[tmpCountry]])
 ```
 
 
+
 ---
-## Romania
+## Available parameters: Romania
 
 ```{r "Romania", echo=FALSE, cache=FALSE, results='asis', warning=FALSE}
 tmpCountry <- 9
@@ -237,8 +243,9 @@ printAggrData(countryAggrData_l[[tmpCountry]])
 ```
 
 
+
 ---
-## Spain
+## Available parameters: Spain
 
 ```{r "Spain", echo=FALSE, cache=FALSE, results='asis', warning=FALSE}
 tmpCountry <- 10
@@ -247,8 +254,9 @@ printAggrData(countryAggrData_l[[tmpCountry]])
 ```
 
 
+
 ---
-## Sweden
+## Available parameters: Sweden
 
 ```{r "Sweden", echo=FALSE, cache=FALSE, results='asis', warning=FALSE}
 tmpCountry <- 11
@@ -257,9 +265,9 @@ printAggrData(countryAggrData_l[[tmpCountry]])
 ```
 
 
----
-## Stat aggregate per dominio
 
+---
+## Available parameters per domain: Terrestrial
 
 ```{r "domainRawDataQuery", echo=FALSE, cache=FALSE}
 sqlDomainQueryToDataTable <- function(domainName, sqlQuery = db.sqlite.cfg$query[[2]]) {
@@ -268,7 +276,7 @@ sqlDomainQueryToDataTable <- function(domainName, sqlQuery = db.sqlite.cfg$query
     , key = c("siteLTERCode", "siteName", "domainName")
   )
 }
-# Get Country data
+# Get Domain data
 domainRawData_l <- lapply(db.sqlite.cfg$domainNames, sqlDomainQueryToDataTable)
 # Convert Lat and Long coordinates in Lat:Long
 domainRawData_l <- lapply(
@@ -280,10 +288,6 @@ domainAggrData_l <- domainRawData_l
 domainAggrData_l <- lapply(domainAggrData_l, aggregatreByParameter)
 ```
 
-
----
-## Terrestrial
-
 ```{r "Terrestrial", echo=FALSE, cache=FALSE, results='asis', warning=FALSE}
 tmpDomain <- 1
 countryPlot(unique(domainRawData_l[[tmpDomain]]), db.sqlite.cfg$domainNames[tmpDomain])
@@ -291,8 +295,9 @@ printAggrData(domainAggrData_l[[tmpDomain]])
 ```
 
 
+
 ---
-## Freshwater-lake
+## ## Available parameters per domain: Freshwater-lake
 
 ```{r "Freshwater-lake", echo=FALSE, cache=FALSE, results='asis', warning=FALSE}
 tmpDomain <- 2
@@ -302,7 +307,7 @@ printAggrData(domainAggrData_l[[tmpDomain]])
 
 
 ---
-## Freshwater-river
+## Available parameters per domain: Freshwater-river
 
 ```{r "Freshwater-river", echo=FALSE, cache=FALSE, results='asis', warning=FALSE}
 tmpDomain <- 3
@@ -311,8 +316,9 @@ printAggrData(domainAggrData_l[[tmpDomain]])
 ```
 
 
+
 ---
-## Marine
+## Available parameters per domain: Marine
 
 ```{r "Marine", echo=FALSE, cache=FALSE, results='asis', warning=FALSE}
 tmpDomain <- 4
@@ -321,15 +327,25 @@ printAggrData(domainAggrData_l[[tmpDomain]])
 ```
 
 
+
 ---
-## Kick off discussion
+## Discussion kick off
 
-1. Obiettivo: pubblicazione peer-review
-2. Analisi spaziale (non temporale)
+1. A spatial metanalysis
 
-* Panel esperti di dominio? -> 3 progetti
-* Singolo panel inter-domain? -> 1 progettone
-* 
+2. Objective: peer-review paper?
+
+3. Highly common parameters measured accross sites:
+  * Mean **temperature** and precipitation, at monthly and year level
+  * **Biomass** (Chlorophyll a), Biomass of vascular plants
+  
+4. **Domain-wise** or **single** expert panel? Domain specific common parameters:
+  * **Terrestrial**: Soil C/N, biodiversity (species list, coverage), atmospheric depositions
+  * **Freshwater lake**: physical/chemical characteristics
+  * **Marine**: physical/chemical characteristics
+
+5. If you still did not hand in data for year 2012, please do, now!
+
 
 ```{r "closeDBConnection", cache=FALSE, include=FALSE, echo=FALSE}
 dbDisconnect(dbConnection)

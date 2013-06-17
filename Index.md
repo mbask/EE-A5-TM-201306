@@ -22,50 +22,53 @@ github:
 
 
 
-## Statistiche generali
 
-1. Edit YAML front matter
-2. Write using R Markdown
-3. Use an empty line followed by three dashes to separate slides!
+## Introduction
 
----
-## Andamento della sottomissione
+* A5 represents the experimental phase of the project, based on the sampling in the field of the new and pre‐existing parameters and indicators at different level/scales of investigation, at EnvEurope sites, with specific monitoring intensities and with methods adjusted to the respective intensity of survey.
 
-
+* During 2012 each site was asked for the list of parameters they would deliver
 
 ---
-## Problemi incontrati nella sottomissione
+## Submission timeline
 
-* FTP
-* DEIMS
-* Data tool
-* Google Drive
+* Only nearly 45% of expected parameter datasets has been submitted so far...
+
+* ...and submission window has ended well over 3 months ago!
+
+![Data submission timeline](assets/img/timeLineChart.png)
 
 
 
 ---
-## Proposte di soluzioni
+## Relevant issues brought up
 
-* FTP
-* DEIMS
-* Data tool
-*publish("mbask", "EE-A5-TM-201306")
- Google Drive
+* **DEIMS** has undergone quite a few undocumented changes since its first deployment that resulted in some confusion
 
+* **Data tool** although set up to mimick ICP format, it is perceived as a daunting task
 
+* **FTP archive** someone has experienced login problems. It's definetly not the way to go for file sharing
 
----
-## Statistiche per Nazione
-
-
+* **Google Drive sheets** perceived as "a waste of time"
 
 
 
 ---
-## Austria
+## What can be done
+
+* Integrated upload and metadata processes
+
+* Let the system keep track of the link between the dataset and its metadata set
+
+
+---
+## Available parameters: Austria
+
+
+
 
 <!-- Map generated in R 3.0.1 by googleVis 0.4.3 package -->
-<!-- Mon Jun 17 08:49:22 2013 -->
+<!-- Mon Jun 17 18:42:55 2013 -->
 
 
 <!-- jsHeader -->
@@ -96,7 +99,7 @@ function drawChartCountryAndDomainPlotAustria() {
 options["showTip"] = true;
 options["mapType"] = "terrain";
 options["useMapTypeControl"] = true;
-options["width"] =   1000;
+options["width"] =    970;
 options["height"] =    200;
 
      var chart = new google.visualization.Map(
@@ -155,10 +158,10 @@ function displayChartCountryAndDomainPlotAustria() {
 <!-- divChart -->
   
 <div id="CountryAndDomainPlotAustria"
-  style="width: 1000px; height: 200px;">
+  style="width: 970px; height: 200px;">
 </div>
 <!-- html table generated in R 3.0.1 by xtable 1.7-1 package -->
-<!-- Mon Jun 17 08:49:22 2013 -->
+<!-- Mon Jun 17 18:42:55 2013 -->
 <TABLE >
 <TR> <TH> Parameter name </TH> <TH> Sites </TH>  </TR>
   <TR> <TD> Annual mean temperature and precipitation (snow where relevant) </TD> <TD align="right">   1 </TD> </TR>
@@ -167,11 +170,12 @@ function displayChartCountryAndDomainPlotAustria() {
 
 
 
+
 ---
-## Bulgaria
+## Available parameters: Bulgaria
 
 <!-- Map generated in R 3.0.1 by googleVis 0.4.3 package -->
-<!-- Mon Jun 17 08:49:22 2013 -->
+<!-- Mon Jun 17 18:42:55 2013 -->
 
 
 <!-- jsHeader -->
@@ -207,7 +211,7 @@ function drawChartCountryAndDomainPlotBulgaria() {
 options["showTip"] = true;
 options["mapType"] = "terrain";
 options["useMapTypeControl"] = true;
-options["width"] =   1000;
+options["width"] =    970;
 options["height"] =    200;
 
      var chart = new google.visualization.Map(
@@ -266,10 +270,10 @@ function displayChartCountryAndDomainPlotBulgaria() {
 <!-- divChart -->
   
 <div id="CountryAndDomainPlotBulgaria"
-  style="width: 1000px; height: 200px;">
+  style="width: 970px; height: 200px;">
 </div>
 <!-- html table generated in R 3.0.1 by xtable 1.7-1 package -->
-<!-- Mon Jun 17 08:49:22 2013 -->
+<!-- Mon Jun 17 18:42:55 2013 -->
 <TABLE >
 <TR> <TH> Parameter name </TH> <TH> Sites </TH>  </TR>
   <TR> <TD> Physical/chemical characteristics: temperature </TD> <TD align="right">   2 </TD> </TR>
@@ -288,12 +292,11 @@ function displayChartCountryAndDomainPlotBulgaria() {
 
 
 
-
 ---
-## Finland
+## Available parameters: Finland
 
 <!-- Map generated in R 3.0.1 by googleVis 0.4.3 package -->
-<!-- Mon Jun 17 08:49:22 2013 -->
+<!-- Mon Jun 17 18:42:55 2013 -->
 
 
 <!-- jsHeader -->
@@ -322,7 +325,7 @@ function drawChartCountryAndDomainPlotFinland() {
 options["showTip"] = true;
 options["mapType"] = "terrain";
 options["useMapTypeControl"] = true;
-options["width"] =   1000;
+options["width"] =    970;
 options["height"] =    200;
 
      var chart = new google.visualization.Map(
@@ -381,10 +384,10 @@ function displayChartCountryAndDomainPlotFinland() {
 <!-- divChart -->
   
 <div id="CountryAndDomainPlotFinland"
-  style="width: 1000px; height: 200px;">
+  style="width: 970px; height: 200px;">
 </div>
 <!-- html table generated in R 3.0.1 by xtable 1.7-1 package -->
-<!-- Mon Jun 17 08:49:22 2013 -->
+<!-- Mon Jun 17 18:42:55 2013 -->
 <TABLE >
 <TR> <TH> Parameter name </TH> <TH> Sites </TH>  </TR>
   <TR> <TD> None </TD> <TD> N/A </TD> </TR>
@@ -392,11 +395,12 @@ function displayChartCountryAndDomainPlotFinland() {
 
 
 
+
 ---
-## Germany
+## Available parameters: Germany
 
 <!-- Map generated in R 3.0.1 by googleVis 0.4.3 package -->
-<!-- Mon Jun 17 08:49:22 2013 -->
+<!-- Mon Jun 17 18:42:55 2013 -->
 
 
 <!-- jsHeader -->
@@ -447,7 +451,7 @@ function drawChartCountryAndDomainPlotGermany() {
 options["showTip"] = true;
 options["mapType"] = "terrain";
 options["useMapTypeControl"] = true;
-options["width"] =   1000;
+options["width"] =    970;
 options["height"] =    200;
 
      var chart = new google.visualization.Map(
@@ -506,10 +510,10 @@ function displayChartCountryAndDomainPlotGermany() {
 <!-- divChart -->
   
 <div id="CountryAndDomainPlotGermany"
-  style="width: 1000px; height: 200px;">
+  style="width: 970px; height: 200px;">
 </div>
 <!-- html table generated in R 3.0.1 by xtable 1.7-1 package -->
-<!-- Mon Jun 17 08:49:22 2013 -->
+<!-- Mon Jun 17 18:42:55 2013 -->
 <TABLE >
 <TR> <TH> Parameter name </TH> <TH> Sites </TH>  </TR>
   <TR> <TD> Physical/chemical characteristics: temperature </TD> <TD align="right">   3 </TD> </TR>
@@ -538,10 +542,10 @@ function displayChartCountryAndDomainPlotGermany() {
 
 
 ---
-## Hungary
+## Available parameters: Hungary
 
 <!-- Map generated in R 3.0.1 by googleVis 0.4.3 package -->
-<!-- Mon Jun 17 08:49:22 2013 -->
+<!-- Mon Jun 17 18:42:55 2013 -->
 
 
 <!-- jsHeader -->
@@ -582,7 +586,7 @@ function drawChartCountryAndDomainPlotHungary() {
 options["showTip"] = true;
 options["mapType"] = "terrain";
 options["useMapTypeControl"] = true;
-options["width"] =   1000;
+options["width"] =    970;
 options["height"] =    200;
 
      var chart = new google.visualization.Map(
@@ -641,10 +645,10 @@ function displayChartCountryAndDomainPlotHungary() {
 <!-- divChart -->
   
 <div id="CountryAndDomainPlotHungary"
-  style="width: 1000px; height: 200px;">
+  style="width: 970px; height: 200px;">
 </div>
 <!-- html table generated in R 3.0.1 by xtable 1.7-1 package -->
-<!-- Mon Jun 17 08:49:22 2013 -->
+<!-- Mon Jun 17 18:42:55 2013 -->
 <TABLE >
 <TR> <TH> Parameter name </TH> <TH> Sites </TH>  </TR>
   <TR> <TD> Global radiation reaching the site </TD> <TD align="right">   2 </TD> </TR>
@@ -673,10 +677,10 @@ function displayChartCountryAndDomainPlotHungary() {
 
 
 ---
-## Italy
+## Available parameters: Italy
 
 <!-- Map generated in R 3.0.1 by googleVis 0.4.3 package -->
-<!-- Mon Jun 17 08:49:22 2013 -->
+<!-- Mon Jun 17 18:42:55 2013 -->
 
 
 <!-- jsHeader -->
@@ -757,7 +761,7 @@ function drawChartCountryAndDomainPlotItaly() {
 options["showTip"] = true;
 options["mapType"] = "terrain";
 options["useMapTypeControl"] = true;
-options["width"] =   1000;
+options["width"] =    970;
 options["height"] =    200;
 
      var chart = new google.visualization.Map(
@@ -816,10 +820,10 @@ function displayChartCountryAndDomainPlotItaly() {
 <!-- divChart -->
   
 <div id="CountryAndDomainPlotItaly"
-  style="width: 1000px; height: 200px;">
+  style="width: 970px; height: 200px;">
 </div>
 <!-- html table generated in R 3.0.1 by xtable 1.7-1 package -->
-<!-- Mon Jun 17 08:49:22 2013 -->
+<!-- Mon Jun 17 18:42:55 2013 -->
 <TABLE >
 <TR> <TH> Parameter name </TH> <TH> Sites </TH>  </TR>
   <TR> <TD> Physical/chemical characteristics: oxygen </TD> <TD align="right">  10 </TD> </TR>
@@ -848,10 +852,10 @@ function displayChartCountryAndDomainPlotItaly() {
 
 
 ---
-## Lithuania
+## Available parameters: Lithuania
 
 <!-- Map generated in R 3.0.1 by googleVis 0.4.3 package -->
-<!-- Mon Jun 17 08:49:22 2013 -->
+<!-- Mon Jun 17 18:42:55 2013 -->
 
 
 <!-- jsHeader -->
@@ -892,7 +896,7 @@ function drawChartCountryAndDomainPlotLithuania() {
 options["showTip"] = true;
 options["mapType"] = "terrain";
 options["useMapTypeControl"] = true;
-options["width"] =   1000;
+options["width"] =    970;
 options["height"] =    200;
 
      var chart = new google.visualization.Map(
@@ -951,10 +955,10 @@ function displayChartCountryAndDomainPlotLithuania() {
 <!-- divChart -->
   
 <div id="CountryAndDomainPlotLithuania"
-  style="width: 1000px; height: 200px;">
+  style="width: 970px; height: 200px;">
 </div>
 <!-- html table generated in R 3.0.1 by xtable 1.7-1 package -->
-<!-- Mon Jun 17 08:49:22 2013 -->
+<!-- Mon Jun 17 18:42:55 2013 -->
 <TABLE >
 <TR> <TH> Parameter name </TH> <TH> Sites </TH>  </TR>
   <TR> <TD> Soil C/N </TD> <TD align="right">   5 </TD> </TR>
@@ -979,11 +983,12 @@ function displayChartCountryAndDomainPlotLithuania() {
 
 
 
+
 ---
-## Poland
+## Available parameters: Poland
 
 <!-- Map generated in R 3.0.1 by googleVis 0.4.3 package -->
-<!-- Mon Jun 17 08:49:22 2013 -->
+<!-- Mon Jun 17 18:42:55 2013 -->
 
 
 <!-- jsHeader -->
@@ -1064,7 +1069,7 @@ function drawChartCountryAndDomainPlotPoland() {
 options["showTip"] = true;
 options["mapType"] = "terrain";
 options["useMapTypeControl"] = true;
-options["width"] =   1000;
+options["width"] =    970;
 options["height"] =    200;
 
      var chart = new google.visualization.Map(
@@ -1123,10 +1128,10 @@ function displayChartCountryAndDomainPlotPoland() {
 <!-- divChart -->
   
 <div id="CountryAndDomainPlotPoland"
-  style="width: 1000px; height: 200px;">
+  style="width: 970px; height: 200px;">
 </div>
 <!-- html table generated in R 3.0.1 by xtable 1.7-1 package -->
-<!-- Mon Jun 17 08:49:22 2013 -->
+<!-- Mon Jun 17 18:42:55 2013 -->
 <TABLE >
 <TR> <TH> Parameter name </TH> <TH> Sites </TH>  </TR>
   <TR> <TD> Annual mean temperature and precipitation (snow where relevant) </TD> <TD align="right">   4 </TD> </TR>
@@ -1153,11 +1158,12 @@ function displayChartCountryAndDomainPlotPoland() {
 
 
 
+
 ---
-## Romania
+## Available parameters: Romania
 
 <!-- Map generated in R 3.0.1 by googleVis 0.4.3 package -->
-<!-- Mon Jun 17 08:49:22 2013 -->
+<!-- Mon Jun 17 18:42:55 2013 -->
 
 
 <!-- jsHeader -->
@@ -1188,7 +1194,7 @@ function drawChartCountryAndDomainPlotRomania() {
 options["showTip"] = true;
 options["mapType"] = "terrain";
 options["useMapTypeControl"] = true;
-options["width"] =   1000;
+options["width"] =    970;
 options["height"] =    200;
 
      var chart = new google.visualization.Map(
@@ -1247,10 +1253,10 @@ function displayChartCountryAndDomainPlotRomania() {
 <!-- divChart -->
   
 <div id="CountryAndDomainPlotRomania"
-  style="width: 1000px; height: 200px;">
+  style="width: 970px; height: 200px;">
 </div>
 <!-- html table generated in R 3.0.1 by xtable 1.7-1 package -->
-<!-- Mon Jun 17 08:49:22 2013 -->
+<!-- Mon Jun 17 18:42:55 2013 -->
 <TABLE >
 <TR> <TH> Parameter name </TH> <TH> Sites </TH>  </TR>
   <TR> <TD> Aboveground biomass by indirect methods </TD> <TD align="right">   1 </TD> </TR>
@@ -1272,11 +1278,12 @@ function displayChartCountryAndDomainPlotRomania() {
 
 
 
+
 ---
-## Spain
+## Available parameters: Spain
 
 <!-- Map generated in R 3.0.1 by googleVis 0.4.3 package -->
-<!-- Mon Jun 17 08:49:22 2013 -->
+<!-- Mon Jun 17 18:42:55 2013 -->
 
 
 <!-- jsHeader -->
@@ -1322,7 +1329,7 @@ function drawChartCountryAndDomainPlotSpain() {
 options["showTip"] = true;
 options["mapType"] = "terrain";
 options["useMapTypeControl"] = true;
-options["width"] =   1000;
+options["width"] =    970;
 options["height"] =    200;
 
      var chart = new google.visualization.Map(
@@ -1381,10 +1388,10 @@ function displayChartCountryAndDomainPlotSpain() {
 <!-- divChart -->
   
 <div id="CountryAndDomainPlotSpain"
-  style="width: 1000px; height: 200px;">
+  style="width: 970px; height: 200px;">
 </div>
 <!-- html table generated in R 3.0.1 by xtable 1.7-1 package -->
-<!-- Mon Jun 17 08:49:22 2013 -->
+<!-- Mon Jun 17 18:42:55 2013 -->
 <TABLE >
 <TR> <TH> Parameter name </TH> <TH> Sites </TH>  </TR>
   <TR> <TD> Annual mean temperature and precipitation (snow where relevant) </TD> <TD align="right">   3 </TD> </TR>
@@ -1411,11 +1418,12 @@ function displayChartCountryAndDomainPlotSpain() {
 
 
 
+
 ---
-## Sweden
+## Available parameters: Sweden
 
 <!-- Map generated in R 3.0.1 by googleVis 0.4.3 package -->
-<!-- Mon Jun 17 08:49:22 2013 -->
+<!-- Mon Jun 17 18:42:55 2013 -->
 
 
 <!-- jsHeader -->
@@ -1461,7 +1469,7 @@ function drawChartCountryAndDomainPlotSweden() {
 options["showTip"] = true;
 options["mapType"] = "terrain";
 options["useMapTypeControl"] = true;
-options["width"] =   1000;
+options["width"] =    970;
 options["height"] =    200;
 
      var chart = new google.visualization.Map(
@@ -1520,10 +1528,10 @@ function displayChartCountryAndDomainPlotSweden() {
 <!-- divChart -->
   
 <div id="CountryAndDomainPlotSweden"
-  style="width: 1000px; height: 200px;">
+  style="width: 970px; height: 200px;">
 </div>
 <!-- html table generated in R 3.0.1 by xtable 1.7-1 package -->
-<!-- Mon Jun 17 08:49:22 2013 -->
+<!-- Mon Jun 17 18:42:55 2013 -->
 <TABLE >
 <TR> <TH> Parameter name </TH> <TH> Sites </TH>  </TR>
   <TR> <TD> Aboveground Net Primary Production </TD> <TD align="right">   4 </TD> </TR>
@@ -1550,19 +1558,15 @@ function displayChartCountryAndDomainPlotSweden() {
 
 
 
----
-## Stat aggregate per dominio
-
-
-
-
-
 
 ---
-## Terrestrial
+## Available parameters per domain: Terrestrial
+
+
+
 
 <!-- Map generated in R 3.0.1 by googleVis 0.4.3 package -->
-<!-- Mon Jun 17 08:49:22 2013 -->
+<!-- Mon Jun 17 18:42:55 2013 -->
 
 
 <!-- jsHeader -->
@@ -1703,7 +1707,7 @@ function drawChartCountryAndDomainPlotTerrestrial() {
 options["showTip"] = true;
 options["mapType"] = "terrain";
 options["useMapTypeControl"] = true;
-options["width"] =   1000;
+options["width"] =    970;
 options["height"] =    200;
 
      var chart = new google.visualization.Map(
@@ -1762,10 +1766,10 @@ function displayChartCountryAndDomainPlotTerrestrial() {
 <!-- divChart -->
   
 <div id="CountryAndDomainPlotTerrestrial"
-  style="width: 1000px; height: 200px;">
+  style="width: 970px; height: 200px;">
 </div>
 <!-- html table generated in R 3.0.1 by xtable 1.7-1 package -->
-<!-- Mon Jun 17 08:49:22 2013 -->
+<!-- Mon Jun 17 18:42:55 2013 -->
 <TABLE >
 <TR> <TH> Parameter name </TH> <TH> Sites </TH>  </TR>
   <TR> <TD> Annual mean temperature and precipitation (snow where relevant) </TD> <TD align="right">  20 </TD> </TR>
@@ -1792,11 +1796,12 @@ function displayChartCountryAndDomainPlotTerrestrial() {
 
 
 
+
 ---
-## Freshwater-lake
+## ## Available parameters per domain: Freshwater-lake
 
 <!-- Map generated in R 3.0.1 by googleVis 0.4.3 package -->
-<!-- Mon Jun 17 08:49:22 2013 -->
+<!-- Mon Jun 17 18:42:55 2013 -->
 
 
 <!-- jsHeader -->
@@ -1887,7 +1892,7 @@ function drawChartCountryAndDomainPlotFreshwaterlake() {
 options["showTip"] = true;
 options["mapType"] = "terrain";
 options["useMapTypeControl"] = true;
-options["width"] =   1000;
+options["width"] =    970;
 options["height"] =    200;
 
      var chart = new google.visualization.Map(
@@ -1946,10 +1951,10 @@ function displayChartCountryAndDomainPlotFreshwaterlake() {
 <!-- divChart -->
   
 <div id="CountryAndDomainPlotFreshwaterlake"
-  style="width: 1000px; height: 200px;">
+  style="width: 970px; height: 200px;">
 </div>
 <!-- html table generated in R 3.0.1 by xtable 1.7-1 package -->
-<!-- Mon Jun 17 08:49:22 2013 -->
+<!-- Mon Jun 17 18:42:55 2013 -->
 <TABLE >
 <TR> <TH> Parameter name </TH> <TH> Sites </TH>  </TR>
   <TR> <TD> Chlorophyll a (connected to biomass in lakes) </TD> <TD align="right">  11 </TD> </TR>
@@ -1977,10 +1982,10 @@ function displayChartCountryAndDomainPlotFreshwaterlake() {
 
 
 ---
-## Freshwater-river
+## Available parameters per domain: Freshwater-river
 
 <!-- Map generated in R 3.0.1 by googleVis 0.4.3 package -->
-<!-- Mon Jun 17 08:49:22 2013 -->
+<!-- Mon Jun 17 18:42:56 2013 -->
 
 
 <!-- jsHeader -->
@@ -2011,7 +2016,7 @@ function drawChartCountryAndDomainPlotFreshwaterriver() {
 options["showTip"] = true;
 options["mapType"] = "terrain";
 options["useMapTypeControl"] = true;
-options["width"] =   1000;
+options["width"] =    970;
 options["height"] =    200;
 
      var chart = new google.visualization.Map(
@@ -2070,10 +2075,10 @@ function displayChartCountryAndDomainPlotFreshwaterriver() {
 <!-- divChart -->
   
 <div id="CountryAndDomainPlotFreshwaterriver"
-  style="width: 1000px; height: 200px;">
+  style="width: 970px; height: 200px;">
 </div>
 <!-- html table generated in R 3.0.1 by xtable 1.7-1 package -->
-<!-- Mon Jun 17 08:49:22 2013 -->
+<!-- Mon Jun 17 18:42:56 2013 -->
 <TABLE >
 <TR> <TH> Parameter name </TH> <TH> Sites </TH>  </TR>
   <TR> <TD> Basic climate at the site: monthly temperature and precipitation </TD> <TD align="right">   1 </TD> </TR>
@@ -2087,11 +2092,12 @@ function displayChartCountryAndDomainPlotFreshwaterriver() {
 
 
 
+
 ---
-## Marine
+## Available parameters per domain: Marine
 
 <!-- Map generated in R 3.0.1 by googleVis 0.4.3 package -->
-<!-- Mon Jun 17 08:49:22 2013 -->
+<!-- Mon Jun 17 18:42:56 2013 -->
 
 
 <!-- jsHeader -->
@@ -2157,7 +2163,7 @@ function drawChartCountryAndDomainPlotMarine() {
 options["showTip"] = true;
 options["mapType"] = "terrain";
 options["useMapTypeControl"] = true;
-options["width"] =   1000;
+options["width"] =    970;
 options["height"] =    200;
 
      var chart = new google.visualization.Map(
@@ -2216,10 +2222,10 @@ function displayChartCountryAndDomainPlotMarine() {
 <!-- divChart -->
   
 <div id="CountryAndDomainPlotMarine"
-  style="width: 1000px; height: 200px;">
+  style="width: 970px; height: 200px;">
 </div>
 <!-- html table generated in R 3.0.1 by xtable 1.7-1 package -->
-<!-- Mon Jun 17 08:49:22 2013 -->
+<!-- Mon Jun 17 18:42:56 2013 -->
 <TABLE >
 <TR> <TH> Parameter name </TH> <TH> Sites </TH>  </TR>
   <TR> <TD> Chlorophyll a (connected to biomass of phytoplankton) </TD> <TD align="right">   8 </TD> </TR>
@@ -2241,15 +2247,25 @@ function displayChartCountryAndDomainPlotMarine() {
 
 
 
+
 ---
-## Kick off discussion
+## Discussion kick off
 
-1. Obiettivo: pubblicazione peer-review
-2. Analisi spaziale (non temporale)
+1. A spatial metanalysis
 
-* Panel esperti di dominio? -> 3 progetti
-* Singolo panel inter-domain? -> 1 progettone
-* 
+2. Objective: peer-review paper?
+
+3. Highly common parameters measured accross sites:
+  * Mean **temperature** and precipitation, at monthly and year level
+  * **Biomass** (Chlorophyll a), Biomass of vascular plants
+  
+4. **Domain-wise** or **single** expert panel? Domain specific common parameters:
+  * **Terrestrial**: Soil C/N, biodiversity (species list, coverage), atmospheric depositions
+  * **Freshwater lake**: physical/chemical characteristics
+  * **Marine**: physical/chemical characteristics
+
+5. If you still did not hand in data for year 2012, please do, now!
+
 
 
 

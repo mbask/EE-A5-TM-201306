@@ -24,3 +24,5 @@ table th {
 table td {
   border-bottom: 1px solid #CFCEBD;
 }
+
+strong {font-weight: bold}
