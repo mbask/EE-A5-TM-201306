@@ -256,7 +256,7 @@ printAggrData(countryAggrData_l[[tmpCountry]])
 
 
 ---
-## Available parameters per domain: Terrestrial
+## Available parameters (Terrestrial domain)
 
 ```{r "domainRawDataQuery", echo=FALSE, cache=FALSE}
 sqlDomainQueryToDataTable <- function(domainName, sqlQuery = db.sqlite.cfg$query[[2]]) {
@@ -286,7 +286,7 @@ printAggrData(domainAggrData_l[[tmpDomain]])
 
 
 ---
-## Available parameters per domain: Lake
+## Available parameters (Lake domain)
 
 ```{r "Freshwater-lake", echo=FALSE, cache=FALSE, results='asis', warning=FALSE}
 tmpDomain <- 2
@@ -297,7 +297,7 @@ printAggrData(domainAggrData_l[[tmpDomain]])
 
 
 ---
-## Available parameters per domain: Marine
+## Available parameters (Marine domain)
 
 ```{r "Marine", echo=FALSE, cache=FALSE, results='asis', warning=FALSE}
 tmpDomain <- 4
@@ -310,7 +310,7 @@ printAggrData(domainAggrData_l[[tmpDomain]])
 ---
 ## Discussion kick off
 
-1. A spatial metanalysis
+1. A spatial meta-analysis
 
 2. Objective: peer-review paper?
 
