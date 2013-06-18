@@ -295,16 +295,6 @@ printAggrData(domainAggrData_l[[tmpDomain]])
 ```
 
 
----
-## Available parameters per domain: River
-
-```{r "Freshwater-river", echo=FALSE, cache=FALSE, results='asis', warning=FALSE}
-tmpDomain <- 3
-countryPlot(unique(domainRawData_l[[tmpDomain]]), db.sqlite.cfg$domainNames[tmpDomain])
-printAggrData(domainAggrData_l[[tmpDomain]])
-```
-
-
 
 ---
 ## Available parameters per domain: Marine
