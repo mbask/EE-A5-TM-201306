@@ -77,8 +77,8 @@ sqlPaths("~/Documents/Academy/IBAF/ENVEUROPE/A5Finland/sql")
 db.sqlite.cfg  <- list(
   fName    = "~/Documents/Academy/IBAF/ENVEUROPE/A5/DB/EEA5SiteParameters.db"
   , driver =  dbDriver("SQLite")
-  , query  = list("getAvailableDataByCountry", "getAvailableDataByDomain")
-  , queryTitle = list("Uploaded Data by country", "Uploaded data by domain")
+  , query  = list("getAvailableDataByCountry", "getAvailableDataByDomain", "getSiteCountByCountry")
+  , queryTitle = list("Uploaded Data by country", "Uploaded data by domain", "# of sites by country")
   , countryNames = c("Austria", "Bulgaria", "Finland", "Germany", "Hungary", "Italy", "Lithuania", "Poland", "Romania", "Spain", "Sweden")
   , domainNames = c("Terrestrial", "Freshwater-lake", "Freshwater-river", "Marine")
 )
@@ -97,7 +97,6 @@ dbConnection <- with(db.sqlite.cfg, dbConnect(driver, dbname = fName))
 ## Submission timeline
 
 * Only nearly 45% of expected parameter datasets has been submitted so far...
-
 * ...and submission window has ended well over 3 months ago!
 
 ![Data submission timeline](assets/img/timeLineChart.png)
@@ -126,7 +125,7 @@ dbConnection <- with(db.sqlite.cfg, dbConnect(driver, dbname = fName))
 
 
 ---
-## Available parameters: Austria
+## Available parameters: Austria (# `r tmpCountry <- 1; execQuery(db.sqlite.cfg$query[[3]], connection = dbConnection, countryName = db.sqlite.cfg$countryNames[tmpCountry])$Count` sites)
 
 ```{r "countryRawDataQuery", echo=FALSE, cache=FALSE}
 sqlQueryToDataTable <- function(countryName, sqlQuery = db.sqlite.cfg$query[[1]]) {
@@ -148,8 +147,8 @@ countryAggrData_l <- countryRawData_l
 countryAggrData_l <- lapply(countryAggrData_l, aggregatreByParameter)
 ```
 
+
 ```{r "Austria", echo=FALSE, cache=FALSE, results='asis', warning=FALSE}
-tmpCountry <- 1
 countryPlot(unique(countryRawData_l[[tmpCountry]]), db.sqlite.cfg$countryNames[tmpCountry])
 printAggrData(countryAggrData_l[[tmpCountry]])
 ```
@@ -157,7 +156,7 @@ printAggrData(countryAggrData_l[[tmpCountry]])
 
 
 ---
-## Available parameters: Bulgaria
+## Available parameters: Bulgaria (# `r tmpCountry <- 2; execQuery(db.sqlite.cfg$query[[3]], connection = dbConnection, countryName = db.sqlite.cfg$countryNames[tmpCountry])$Count` sites)
 
 ```{r "Bulgaria", echo=FALSE, cache=FALSE, results='asis', warning=FALSE}
 tmpCountry <- 2
@@ -168,10 +167,9 @@ printAggrData(countryAggrData_l[[tmpCountry]])
 
 
 ---
-## Available parameters: Finland
+## Available parameters: Finland (# `r tmpCountry <- 3; execQuery(db.sqlite.cfg$query[[3]], connection = dbConnection, countryName = db.sqlite.cfg$countryNames[tmpCountry])$Count` sites)
 
 ```{r "Finland", echo=FALSE, cache=FALSE, results='asis', warning=FALSE}
-tmpCountry <- 3
 countryPlot(unique(countryRawData_l[[tmpCountry]]), db.sqlite.cfg$countryNames[tmpCountry])
 printAggrData(countryAggrData_l[[tmpCountry]])
 ```
@@ -179,10 +177,9 @@ printAggrData(countryAggrData_l[[tmpCountry]])
 
 
 ---
-## Available parameters: Germany
+## Available parameters: Germany (# `r tmpCountry <- 4; execQuery(db.sqlite.cfg$query[[3]], connection = dbConnection, countryName = db.sqlite.cfg$countryNames[tmpCountry])$Count` sites)
 
 ```{r "Germany", echo=FALSE, cache=FALSE, results='asis', warning=FALSE}
-tmpCountry <- 4
 countryPlot(unique(countryRawData_l[[tmpCountry]]), db.sqlite.cfg$countryNames[tmpCountry])
 printAggrData(countryAggrData_l[[tmpCountry]])
 ```
@@ -190,10 +187,9 @@ printAggrData(countryAggrData_l[[tmpCountry]])
 
 
 ---
-## Available parameters: Hungary
+## Available parameters: Hungary (# `r tmpCountry <- 5; execQuery(db.sqlite.cfg$query[[3]], connection = dbConnection, countryName = db.sqlite.cfg$countryNames[tmpCountry])$Count` sites)
 
 ```{r "Hungary", echo=FALSE, cache=FALSE, results='asis', warning=FALSE}
-tmpCountry <- 5
 countryPlot(unique(countryRawData_l[[tmpCountry]]), db.sqlite.cfg$countryNames[tmpCountry])
 printAggrData(countryAggrData_l[[tmpCountry]])
 ```
@@ -201,10 +197,9 @@ printAggrData(countryAggrData_l[[tmpCountry]])
 
 
 ---
-## Available parameters: Italy
+## Available parameters: Italy (# `r tmpCountry <- 6; execQuery(db.sqlite.cfg$query[[3]], connection = dbConnection, countryName = db.sqlite.cfg$countryNames[tmpCountry])$Count` sites)
 
 ```{r "Italy", echo=FALSE, cache=FALSE, results='asis', warning=FALSE}
-tmpCountry <- 6
 countryPlot(unique(countryRawData_l[[tmpCountry]]), db.sqlite.cfg$countryNames[tmpCountry])
 printAggrData(countryAggrData_l[[tmpCountry]])
 ```
@@ -212,10 +207,9 @@ printAggrData(countryAggrData_l[[tmpCountry]])
 
 
 ---
-## Available parameters: Lithuania
+## Available parameters: Lithuania (# `r tmpCountry <- 7; execQuery(db.sqlite.cfg$query[[3]], connection = dbConnection, countryName = db.sqlite.cfg$countryNames[tmpCountry])$Count` sites)
 
 ```{r "Lithuania", echo=FALSE, cache=FALSE, results='asis', warning=FALSE}
-tmpCountry <- 7
 countryPlot(unique(countryRawData_l[[tmpCountry]]), db.sqlite.cfg$countryNames[tmpCountry])
 printAggrData(countryAggrData_l[[tmpCountry]])
 ```
@@ -223,10 +217,9 @@ printAggrData(countryAggrData_l[[tmpCountry]])
 
 
 ---
-## Available parameters: Poland
+## Available parameters: Poland (# `r tmpCountry <- 8; execQuery(db.sqlite.cfg$query[[3]], connection = dbConnection, countryName = db.sqlite.cfg$countryNames[tmpCountry])$Count` sites)
 
 ```{r "Poland", echo=FALSE, cache=FALSE, results='asis', warning=FALSE}
-tmpCountry <- 8
 countryPlot(unique(countryRawData_l[[tmpCountry]]), db.sqlite.cfg$countryNames[tmpCountry])
 printAggrData(countryAggrData_l[[tmpCountry]])
 ```
@@ -234,10 +227,9 @@ printAggrData(countryAggrData_l[[tmpCountry]])
 
 
 ---
-## Available parameters: Romania
+## Available parameters: Romania (# `r tmpCountry <- 9; execQuery(db.sqlite.cfg$query[[3]], connection = dbConnection, countryName = db.sqlite.cfg$countryNames[tmpCountry])$Count` sites)
 
 ```{r "Romania", echo=FALSE, cache=FALSE, results='asis', warning=FALSE}
-tmpCountry <- 9
 countryPlot(unique(countryRawData_l[[tmpCountry]]), db.sqlite.cfg$countryNames[tmpCountry])
 printAggrData(countryAggrData_l[[tmpCountry]])
 ```
@@ -245,10 +237,9 @@ printAggrData(countryAggrData_l[[tmpCountry]])
 
 
 ---
-## Available parameters: Spain
+## Available parameters: Spain (# `r tmpCountry <- 10; execQuery(db.sqlite.cfg$query[[3]], connection = dbConnection, countryName = db.sqlite.cfg$countryNames[tmpCountry])$Count` sites)
 
 ```{r "Spain", echo=FALSE, cache=FALSE, results='asis', warning=FALSE}
-tmpCountry <- 10
 countryPlot(unique(countryRawData_l[[tmpCountry]]), db.sqlite.cfg$countryNames[tmpCountry])
 printAggrData(countryAggrData_l[[tmpCountry]])
 ```
@@ -256,10 +247,9 @@ printAggrData(countryAggrData_l[[tmpCountry]])
 
 
 ---
-## Available parameters: Sweden
+## Available parameters: Sweden (# `r tmpCountry <- 11; execQuery(db.sqlite.cfg$query[[3]], connection = dbConnection, countryName = db.sqlite.cfg$countryNames[tmpCountry])$Count` sites)
 
 ```{r "Sweden", echo=FALSE, cache=FALSE, results='asis', warning=FALSE}
-tmpCountry <- 11
 countryPlot(unique(countryRawData_l[[tmpCountry]]), db.sqlite.cfg$countryNames[tmpCountry])
 printAggrData(countryAggrData_l[[tmpCountry]])
 ```
@@ -297,7 +287,7 @@ printAggrData(domainAggrData_l[[tmpDomain]])
 
 
 ---
-## ## Available parameters per domain: Freshwater-lake
+## Available parameters per domain: lake
 
 ```{r "Freshwater-lake", echo=FALSE, cache=FALSE, results='asis', warning=FALSE}
 tmpDomain <- 2
@@ -307,7 +297,7 @@ printAggrData(domainAggrData_l[[tmpDomain]])
 
 
 ---
-## Available parameters per domain: Freshwater-river
+## Available parameters per domain: river
 
 ```{r "Freshwater-river", echo=FALSE, cache=FALSE, results='asis', warning=FALSE}
 tmpDomain <- 3
