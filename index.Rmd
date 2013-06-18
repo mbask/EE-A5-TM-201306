@@ -105,7 +105,7 @@ dbConnection <- with(db.sqlite.cfg, dbConnect(driver, dbname = fName))
 ---
 ## Relevant issues brought up
 
-* **DEIMS** has undergone quite a few undocumented changes since its first deployment that resulted in some confusion
+* **DEIMS** has undergone quite a few changes since its first deployment that resulted in some confusion
 
 * **Data tool** although set up to mimick ICP format, it is perceived as a daunting task
 

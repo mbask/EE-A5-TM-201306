@@ -41,7 +41,7 @@ github:
 ---
 ## Relevant issues brought up
 
-* **DEIMS** has undergone quite a few undocumented changes since its first deployment that resulted in some confusion
+* **DEIMS** has undergone quite a few changes since its first deployment that resulted in some confusion
 
 * **Data tool** although set up to mimick ICP format, it is perceived as a daunting task
 
@@ -67,7 +67,7 @@ github:
 
 
 <!-- Map generated in R 3.0.1 by googleVis 0.4.3 package -->
-<!-- Tue Jun 18 08:08:29 2013 -->
+<!-- Tue Jun 18 08:51:51 2013 -->
 
 
 <!-- jsHeader -->
@@ -160,7 +160,7 @@ function displayChartCountryAndDomainPlotAustria() {
   style="width: 970px; height: 200px;">
 </div>
 <!-- html table generated in R 3.0.1 by xtable 1.7-1 package -->
-<!-- Tue Jun 18 08:08:29 2013 -->
+<!-- Tue Jun 18 08:51:51 2013 -->
 <TABLE >
 <TR> <TH> Parameter name </TH> <TH> Sites </TH>  </TR>
   <TR> <TD> Annual mean temperature and precipitation (snow where relevant) </TD> <TD align="right">   1 </TD> </TR>
@@ -174,7 +174,7 @@ function displayChartCountryAndDomainPlotAustria() {
 ## Available parameters: Bulgaria (# 5 sites)
 
 <!-- Map generated in R 3.0.1 by googleVis 0.4.3 package -->
-<!-- Tue Jun 18 08:08:29 2013 -->
+<!-- Tue Jun 18 08:51:51 2013 -->
 
 
 <!-- jsHeader -->
@@ -272,7 +272,7 @@ function displayChartCountryAndDomainPlotBulgaria() {
   style="width: 970px; height: 200px;">
 </div>
 <!-- html table generated in R 3.0.1 by xtable 1.7-1 package -->
-<!-- Tue Jun 18 08:08:29 2013 -->
+<!-- Tue Jun 18 08:51:51 2013 -->
 <TABLE >
 <TR> <TH> Parameter name </TH> <TH> Sites </TH>  </TR>
   <TR> <TD> Physical/chemical characteristics: temperature </TD> <TD align="right">   2 </TD> </TR>
@@ -295,7 +295,7 @@ function displayChartCountryAndDomainPlotBulgaria() {
 ## Available parameters: Finland (# 1 sites)
 
 <!-- Map generated in R 3.0.1 by googleVis 0.4.3 package -->
-<!-- Tue Jun 18 08:08:29 2013 -->
+<!-- Tue Jun 18 08:51:51 2013 -->
 
 
 <!-- jsHeader -->
@@ -386,7 +386,7 @@ function displayChartCountryAndDomainPlotFinland() {
   style="width: 970px; height: 200px;">
 </div>
 <!-- html table generated in R 3.0.1 by xtable 1.7-1 package -->
-<!-- Tue Jun 18 08:08:29 2013 -->
+<!-- Tue Jun 18 08:51:51 2013 -->
 <TABLE >
 <TR> <TH> Parameter name </TH> <TH> Sites </TH>  </TR>
   <TR> <TD> None </TD> <TD> N/A </TD> </TR>
@@ -399,7 +399,7 @@ function displayChartCountryAndDomainPlotFinland() {
 ## Available parameters: Germany (# 10 sites)
 
 <!-- Map generated in R 3.0.1 by googleVis 0.4.3 package -->
-<!-- Tue Jun 18 08:08:29 2013 -->
+<!-- Tue Jun 18 08:51:51 2013 -->
 
 
 <!-- jsHeader -->
@@ -532,7 +532,7 @@ function displayChartCountryAndDomainPlotGermany() {
   style="width: 970px; height: 200px;">
 </div>
 <!-- html table generated in R 3.0.1 by xtable 1.7-1 package -->
-<!-- Tue Jun 18 08:08:29 2013 -->
+<!-- Tue Jun 18 08:51:51 2013 -->
 <TABLE >
 <TR> <TH> Parameter name </TH> <TH> Sites </TH>  </TR>
   <TR> <TD> Species list of fauna </TD> <TD align="right">   4 </TD> </TR>
@@ -564,7 +564,7 @@ function displayChartCountryAndDomainPlotGermany() {
 ## Available parameters: Hungary (# 3 sites)
 
 <!-- Map generated in R 3.0.1 by googleVis 0.4.3 package -->
-<!-- Tue Jun 18 08:08:29 2013 -->
+<!-- Tue Jun 18 08:51:51 2013 -->
 
 
 <!-- jsHeader -->
@@ -667,7 +667,7 @@ function displayChartCountryAndDomainPlotHungary() {
   style="width: 970px; height: 200px;">
 </div>
 <!-- html table generated in R 3.0.1 by xtable 1.7-1 package -->
-<!-- Tue Jun 18 08:08:29 2013 -->
+<!-- Tue Jun 18 08:51:51 2013 -->
 <TABLE >
 <TR> <TH> Parameter name </TH> <TH> Sites </TH>  </TR>
   <TR> <TD> Global radiation reaching the site </TD> <TD align="right">   2 </TD> </TR>
@@ -699,7 +699,7 @@ function displayChartCountryAndDomainPlotHungary() {
 ## Available parameters: Italy (# 16 sites)
 
 <!-- Map generated in R 3.0.1 by googleVis 0.4.3 package -->
-<!-- Tue Jun 18 08:08:29 2013 -->
+<!-- Tue Jun 18 08:51:51 2013 -->
 
 
 <!-- jsHeader -->
@@ -842,7 +842,7 @@ function displayChartCountryAndDomainPlotItaly() {
   style="width: 970px; height: 200px;">
 </div>
 <!-- html table generated in R 3.0.1 by xtable 1.7-1 package -->
-<!-- Tue Jun 18 08:08:29 2013 -->
+<!-- Tue Jun 18 08:51:51 2013 -->
 <TABLE >
 <TR> <TH> Parameter name </TH> <TH> Sites </TH>  </TR>
   <TR> <TD> Physical/chemical characteristics: oxygen </TD> <TD align="right">  10 </TD> </TR>
@@ -874,7 +874,7 @@ function displayChartCountryAndDomainPlotItaly() {
 ## Available parameters: Lithuania (# 3 sites)
 
 <!-- Map generated in R 3.0.1 by googleVis 0.4.3 package -->
-<!-- Tue Jun 18 08:08:29 2013 -->
+<!-- Tue Jun 18 08:51:51 2013 -->
 
 
 <!-- jsHeader -->
@@ -977,7 +977,7 @@ function displayChartCountryAndDomainPlotLithuania() {
   style="width: 970px; height: 200px;">
 </div>
 <!-- html table generated in R 3.0.1 by xtable 1.7-1 package -->
-<!-- Tue Jun 18 08:08:29 2013 -->
+<!-- Tue Jun 18 08:51:51 2013 -->
 <TABLE >
 <TR> <TH> Parameter name </TH> <TH> Sites </TH>  </TR>
   <TR> <TD> Annual mean temperature and precipitation (snow where relevant) </TD> <TD align="right">   3 </TD> </TR>
@@ -1007,7 +1007,7 @@ function displayChartCountryAndDomainPlotLithuania() {
 ## Available parameters: Poland (# 12 sites)
 
 <!-- Map generated in R 3.0.1 by googleVis 0.4.3 package -->
-<!-- Tue Jun 18 08:08:29 2013 -->
+<!-- Tue Jun 18 08:51:51 2013 -->
 
 
 <!-- jsHeader -->
@@ -1150,7 +1150,7 @@ function displayChartCountryAndDomainPlotPoland() {
   style="width: 970px; height: 200px;">
 </div>
 <!-- html table generated in R 3.0.1 by xtable 1.7-1 package -->
-<!-- Tue Jun 18 08:08:29 2013 -->
+<!-- Tue Jun 18 08:51:51 2013 -->
 <TABLE >
 <TR> <TH> Parameter name </TH> <TH> Sites </TH>  </TR>
   <TR> <TD> Annual mean temperature and precipitation (snow where relevant) </TD> <TD align="right">   4 </TD> </TR>
@@ -1182,7 +1182,7 @@ function displayChartCountryAndDomainPlotPoland() {
 ## Available parameters: Romania (# 3 sites)
 
 <!-- Map generated in R 3.0.1 by googleVis 0.4.3 package -->
-<!-- Tue Jun 18 08:08:29 2013 -->
+<!-- Tue Jun 18 08:51:51 2013 -->
 
 
 <!-- jsHeader -->
@@ -1275,7 +1275,7 @@ function displayChartCountryAndDomainPlotRomania() {
   style="width: 970px; height: 200px;">
 </div>
 <!-- html table generated in R 3.0.1 by xtable 1.7-1 package -->
-<!-- Tue Jun 18 08:08:29 2013 -->
+<!-- Tue Jun 18 08:51:51 2013 -->
 <TABLE >
 <TR> <TH> Parameter name </TH> <TH> Sites </TH>  </TR>
   <TR> <TD> Aboveground biomass by indirect methods </TD> <TD align="right">   1 </TD> </TR>
@@ -1302,7 +1302,7 @@ function displayChartCountryAndDomainPlotRomania() {
 ## Available parameters: Spain (# 5 sites)
 
 <!-- Map generated in R 3.0.1 by googleVis 0.4.3 package -->
-<!-- Tue Jun 18 08:08:29 2013 -->
+<!-- Tue Jun 18 08:51:51 2013 -->
 
 
 <!-- jsHeader -->
@@ -1410,7 +1410,7 @@ function displayChartCountryAndDomainPlotSpain() {
   style="width: 970px; height: 200px;">
 </div>
 <!-- html table generated in R 3.0.1 by xtable 1.7-1 package -->
-<!-- Tue Jun 18 08:08:29 2013 -->
+<!-- Tue Jun 18 08:51:51 2013 -->
 <TABLE >
 <TR> <TH> Parameter name </TH> <TH> Sites </TH>  </TR>
   <TR> <TD> Annual mean temperature and precipitation (snow where relevant) </TD> <TD align="right">   3 </TD> </TR>
@@ -1442,7 +1442,7 @@ function displayChartCountryAndDomainPlotSpain() {
 ## Available parameters: Sweden (# 4 sites)
 
 <!-- Map generated in R 3.0.1 by googleVis 0.4.3 package -->
-<!-- Tue Jun 18 08:08:29 2013 -->
+<!-- Tue Jun 18 08:51:52 2013 -->
 
 
 <!-- jsHeader -->
@@ -1550,7 +1550,7 @@ function displayChartCountryAndDomainPlotSweden() {
   style="width: 970px; height: 200px;">
 </div>
 <!-- html table generated in R 3.0.1 by xtable 1.7-1 package -->
-<!-- Tue Jun 18 08:08:29 2013 -->
+<!-- Tue Jun 18 08:51:52 2013 -->
 <TABLE >
 <TR> <TH> Parameter name </TH> <TH> Sites </TH>  </TR>
   <TR> <TD> Aboveground Net Primary Production </TD> <TD align="right">   4 </TD> </TR>
@@ -1585,7 +1585,7 @@ function displayChartCountryAndDomainPlotSweden() {
 
 
 <!-- Map generated in R 3.0.1 by googleVis 0.4.3 package -->
-<!-- Tue Jun 18 08:08:30 2013 -->
+<!-- Tue Jun 18 08:51:52 2013 -->
 
 
 <!-- jsHeader -->
@@ -1808,7 +1808,7 @@ function displayChartCountryAndDomainPlotTerrestrial() {
   style="width: 970px; height: 200px;">
 </div>
 <!-- html table generated in R 3.0.1 by xtable 1.7-1 package -->
-<!-- Tue Jun 18 08:08:30 2013 -->
+<!-- Tue Jun 18 08:51:52 2013 -->
 <TABLE >
 <TR> <TH> Parameter name </TH> <TH> Sites </TH>  </TR>
   <TR> <TD> Annual mean temperature and precipitation (snow where relevant) </TD> <TD align="right">  20 </TD> </TR>
@@ -1840,7 +1840,7 @@ function displayChartCountryAndDomainPlotTerrestrial() {
 ## Available parameters per domain: Lake
 
 <!-- Map generated in R 3.0.1 by googleVis 0.4.3 package -->
-<!-- Tue Jun 18 08:08:30 2013 -->
+<!-- Tue Jun 18 08:51:52 2013 -->
 
 
 <!-- jsHeader -->
@@ -1993,7 +1993,7 @@ function displayChartCountryAndDomainPlotFreshwaterlake() {
   style="width: 970px; height: 200px;">
 </div>
 <!-- html table generated in R 3.0.1 by xtable 1.7-1 package -->
-<!-- Tue Jun 18 08:08:30 2013 -->
+<!-- Tue Jun 18 08:51:52 2013 -->
 <TABLE >
 <TR> <TH> Parameter name </TH> <TH> Sites </TH>  </TR>
   <TR> <TD> Chlorophyll a (connected to biomass in lakes) </TD> <TD align="right">  11 </TD> </TR>
@@ -2024,7 +2024,7 @@ function displayChartCountryAndDomainPlotFreshwaterlake() {
 ## Available parameters per domain: River
 
 <!-- Map generated in R 3.0.1 by googleVis 0.4.3 package -->
-<!-- Tue Jun 18 08:08:30 2013 -->
+<!-- Tue Jun 18 08:51:52 2013 -->
 
 
 <!-- jsHeader -->
@@ -2117,7 +2117,7 @@ function displayChartCountryAndDomainPlotFreshwaterriver() {
   style="width: 970px; height: 200px;">
 </div>
 <!-- html table generated in R 3.0.1 by xtable 1.7-1 package -->
-<!-- Tue Jun 18 08:08:30 2013 -->
+<!-- Tue Jun 18 08:51:52 2013 -->
 <TABLE >
 <TR> <TH> Parameter name </TH> <TH> Sites </TH>  </TR>
   <TR> <TD> Basic climate at the site: monthly temperature and precipitation </TD> <TD align="right">   1 </TD> </TR>
@@ -2136,7 +2136,7 @@ function displayChartCountryAndDomainPlotFreshwaterriver() {
 ## Available parameters per domain: Marine
 
 <!-- Map generated in R 3.0.1 by googleVis 0.4.3 package -->
-<!-- Tue Jun 18 08:08:30 2013 -->
+<!-- Tue Jun 18 08:51:52 2013 -->
 
 
 <!-- jsHeader -->
@@ -2264,7 +2264,7 @@ function displayChartCountryAndDomainPlotMarine() {
   style="width: 970px; height: 200px;">
 </div>
 <!-- html table generated in R 3.0.1 by xtable 1.7-1 package -->
-<!-- Tue Jun 18 08:08:30 2013 -->
+<!-- Tue Jun 18 08:51:52 2013 -->
 <TABLE >
 <TR> <TH> Parameter name </TH> <TH> Sites </TH>  </TR>
   <TR> <TD> Chlorophyll a (connected to biomass of phytoplankton) </TD> <TD align="right">   8 </TD> </TR>
