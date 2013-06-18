@@ -25,7 +25,6 @@ options(gvis.plot.tag='chart')
 assignInNamespace("cedta.override","slidify","data.table") 
 ```
 
-
 ```{r "functions", cache=TRUE, include=FALSE, echo=FALSE}
 countryPlot <- function(country_df, id) {
   plot(
@@ -287,7 +286,7 @@ printAggrData(domainAggrData_l[[tmpDomain]])
 
 
 ---
-## Available parameters per domain: lake
+## Available parameters per domain: Lake
 
 ```{r "Freshwater-lake", echo=FALSE, cache=FALSE, results='asis', warning=FALSE}
 tmpDomain <- 2
@@ -297,7 +296,7 @@ printAggrData(domainAggrData_l[[tmpDomain]])
 
 
 ---
-## Available parameters per domain: river
+## Available parameters per domain: River
 
 ```{r "Freshwater-river", echo=FALSE, cache=FALSE, results='asis', warning=FALSE}
 tmpDomain <- 3
